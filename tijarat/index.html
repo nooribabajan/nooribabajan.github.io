@@ -8,111 +8,277 @@
     <title>تجارت — نوری باباجان</title>
 
     <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             background: #f4f0e7;
             color: #263238;
-            font-family: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", serif;
+            font-family: "Noto Nastaliq Urdu",
+                         "Jameel Noori Nastaleeq",
+                         serif;
             text-align: center;
         }
 
         header {
-            background: #173f35;
+            background: linear-gradient(
+                135deg,
+                #082b20,
+                #285c4d
+            );
+
             color: white;
-            padding: 50px 20px;
+
+            padding: 55px 20px 45px;
         }
 
         header h1 {
             margin: 0;
-            font-size: 42px;
+            font-size: 44px;
+            line-height: 1.7;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 20px;
+            color: #f4d77b;
         }
 
         .container {
             max-width: 850px;
-            margin: 35px auto;
+            margin: 40px auto;
             padding: 0 18px;
+        }
+
+        .intro {
+            background: white;
+            padding: 25px 20px;
+            border-radius: 20px;
+
+            box-shadow:
+                0 7px 20px rgba(0,0,0,0.08);
+
+            margin-bottom: 30px;
+        }
+
+        .intro p {
+            margin: 0;
+            font-size: 19px;
+            line-height: 2;
         }
 
         .card {
             display: block;
+
             background: white;
             color: #263238;
+
             text-decoration: none;
+
             margin: 20px 0;
-            padding: 28px 20px;
-            border-radius: 18px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            padding: 30px 20px;
+
+            border-radius: 20px;
+
+            border-right: 5px solid #d4af37;
+
+            box-shadow:
+                0 7px 20px rgba(0,0,0,0.08);
+
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
         }
 
         .card h2 {
-            margin: 0 0 8px;
+            margin: 0 0 10px;
+
             color: #173f35;
-            font-size: 28px;
+
+            font-size: 29px;
         }
 
         .card p {
             margin: 0;
+
             font-size: 18px;
+            line-height: 2;
         }
 
         .back {
             display: inline-block;
-            margin: 30px 0;
-            padding: 12px 25px;
+
+            margin: 35px 0;
+
+            padding: 13px 28px;
+
             background: #173f35;
             color: white;
+
             text-decoration: none;
-            border-radius: 10px;
+
+            border-radius: 12px;
+
+            font-size: 18px;
         }
 
         footer {
-            margin-top: 40px;
-            padding: 25px;
-            background: #173f35;
+            margin-top: 50px;
+
+            padding: 30px 20px;
+
+            background: #082b20;
+
             color: white;
         }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 36px;
+            }
+
+            header p {
+                font-size: 18px;
+            }
+
+            .card h2 {
+                font-size: 25px;
+            }
+
+            .card p {
+                font-size: 17px;
+            }
+
+        }
+
     </style>
+
 </head>
+
 
 <body>
 
+
     <header>
-        <h1>🏢 تجارت</h1>
-        <p>کاروبار اور تجارتی سرگرمیاں</p>
+
+        <h1>
+            🏢 تجارت
+        </h1>
+
+        <p>
+            کاروبار اور تجارتی سرگرمیاں
+        </p>
+
     </header>
+
 
     <main class="container">
 
-        <a href="#" class="card">
-            <h2>الماثور فوڈز (پرائیویٹ) پشاور</h2>
-            <p>غذائی مصنوعات اور دیگر کاروباری سرگرمیاں</p>
+
+        <div class="intro">
+
+            <p> کاروبار میں دیانت، معیار میں اعتماد
+            </p>
+
+        </div>
+
+
+        <!-- الماثور فوڈز -->
+
+        <a href="al-mathoor-foods/" class="card">
+
+            <h2>
+                الماثور فوڈز (پرائیویٹ) پشاور
+            </h2>
+
+            <p>
+                خالص ذائقہ، اعلیٰ معیار اور پائیدار اعتماد
+            </p>
+
         </a>
 
-        <a href="#" class="card">
-            <h2>نوری باباجان ٹائر اور رم</h2>
-            <p>ٹائر اور رم</p>
-        </a>
+
+        <!-- نوری باباجان ٹائر اور رم -->
 
         <a href="#" class="card">
-            <h2>معمور چکی آٹا</h2>
-            <p>معیاری چکی آٹا</p>
+
+            <h2>
+                نوری باباجان ٹائر اور رم
+            </h2>
+
+            <p>
+                ٹائر اور رم
+            </p>
+
         </a>
 
+
+        <!-- معمور چکی آٹا -->
+
         <a href="#" class="card">
-            <h2>پشاوری اینٹ</h2>
-            <p>تعمیراتی اینٹ</p>
+
+            <h2>
+                معمور چکی آٹا
+            </h2>
+
+            <p>
+                معیاری چکی آٹا
+            </p>
+
         </a>
+
+
+        <!-- پشاوری اینٹ -->
+
+        <a href="#" class="card">
+
+            <h2>
+                پشاوری اینٹ
+            </h2>
+
+            <p>
+                تعمیراتی اینٹ
+            </p>
+
+        </a>
+
+
+        <!-- مرکزی صفحہ -->
 
         <a href="../" class="back">
+
             ← مرکزی صفحہ
+
         </a>
+
 
     </main>
 
+
     <footer>
-        © 2026 نوری باباجان
+
+        <p>
+            نوری باباجان
+        </p>
+
+        <p>
+            © 2026 All Rights Reserved
+        </p>
+
     </footer>
+
 
 </body>
 
-  </html>
+</html>
