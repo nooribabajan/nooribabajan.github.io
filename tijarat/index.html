@@ -120,6 +120,18 @@
             outline: 3px solid rgba(0,0,0,0.08);
         }
 
+        /* coming soon badge */
+        .coming-soon {
+            display: inline-block;
+            background: #f4d77b;
+            color: #082b20;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
         .back {
             display: inline-block;
 
@@ -168,6 +180,11 @@
 
             .card p {
                 font-size: 17px;
+            }
+
+            .coming-soon {
+                font-size: 13px;
+                padding: 3px 8px;
             }
 
         }
@@ -221,10 +238,11 @@
 
         <!-- نوری باباجان ٹائر اور رم -->
 
-        <a href="#" class="card" aria-disabled="true" onclick="event.preventDefault();" onkeydown="if(event.key === 'Enter'){event.preventDefault();}">
+        <a href="#" class="card" aria-disabled="true" title="جلد آرہا ہے" onclick="event.preventDefault();" onkeydown="if(event.key === 'Enter'){event.preventDefault();}">
 
             <h2>
                 نوری باباجان ٹائر اور رم
+                <span class="coming-soon" aria-hidden="true">جلد آرہا ہے</span>
             </h2>
 
             <p>
@@ -236,10 +254,11 @@
 
         <!-- معمور چکی آٹا -->
 
-        <a href="#" class="card" aria-disabled="true" onclick="event.preventDefault();" onkeydown="if(event.key === 'Enter'){event.preventDefault();}">
+        <a href="#" class="card" aria-disabled="true" title="جلد آرہا ہے" onclick="event.preventDefault();" onkeydown="if(event.key === 'Enter'){event.preventDefault();}">
 
             <h2>
                 معمور چکی آٹا
+                <span class="coming-soon" aria-hidden="true">جلد آرہا ہے</span>
             </h2>
 
             <p>
@@ -251,10 +270,11 @@
 
         <!-- پشاوری اینٹ -->
 
-        <a href="#" class="card" aria-disabled="true" onclick="event.preventDefault();" onkeydown="if(event.key === 'Enter'){event.preventDefault();}">
+        <a href="#" class="card" aria-disabled="true" title="جلد آرہا ہے" onclick="event.preventDefault();" onkeydown="if(event.key === 'Enter'){event.preventDefault();}">
 
             <h2>
                 پشاوری اینٹ
+                <span class="coming-soon" aria-hidden="true">جلد آرہا ہے</span>
             </h2>
 
             <p>
