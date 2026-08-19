@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>الماثور فوڈز (پرائیویٹ) پشاور</title>
+
+    <meta name="description"
+          content="الماثور فوڈز (پرائیویٹ) پشاور — ذائقے اور معیار کا پائیدار رشتہ۔">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f5f0e5;
+            color: #202820;
+            font-family: "Noto Nastaliq Urdu",
+                         "Jameel Noori Nastaleeq",
+                         serif;
+            text-align: center;
+        }
+
+        /* =========================
+           مرکزی ہیرو سیکشن
+        ========================== */
+
+        .hero {
+            padding: 75px 20px 65px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #06291e,
+                    #0d5139,
+                    #082e22
+                );
+
+            color: white;
+        }
+
+        .brand {
+            margin: 0;
+            font-size: 48px;
+            line-height: 1.7;
+            font-weight: bold;
+        }
+
+        .company {
+            margin-top: 5px;
+            font-size: 21px;
+            color: #f4d77b;
+        }
+
+        .gold-line {
+            width: 120px;
+            height: 3px;
+            margin: 28px auto;
+            background: #f4d77b;
+        }
+
+        .tagline {
+            margin: 0;
+            font-size: 32px;
+            line-height: 2;
+            font-weight: bold;
+        }
+
+        .tagline-small {
+            margin-top: 8px;
+            font-size: 23px;
+            color: #f4d77b;
+        }
+
+
+        /* =========================
+           تعارف
+        ========================== */
+
+        .intro {
+            max-width: 850px;
+            margin: 35px auto;
+
+            padding: 40px 28px;
+
+            background: #ffffff;
+
+            border-radius: 22px;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.12);
+        }
+
+        .intro p {
+            margin: 0;
+            font-size: 21px;
+            line-height: 2.3;
+        }
+
+        .trust-message {
+            margin-top: 28px;
+
+            color: #0d5139;
+
+            font-size: 25px;
+            line-height: 2;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           ترجیحات
+        ========================== */
+
+        .section {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            margin-bottom: 30px;
+
+            color: #0d5139;
+
+            font-size: 34px;
+        }
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(210px, 1fr));
+
+            gap: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+
+            padding: 30px 18px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 7px 22px rgba(0,0,0,0.09);
+
+            border-top: 4px solid #f4d77b;
+        }
+
+        .card h3 {
+            margin: 0 0 12px;
+
+            color: #0d5139;
+
+            font-size: 25px;
+        }
+
+        .card p {
+            margin: 0;
+
+            font-size: 18px;
+
+            line-height: 2;
+        }
+
+
+        /* =========================
+           اختتامی پیغام
+        ========================== */
+
+        .closing {
+            max-width: 750px;
+
+            margin: 55px auto 20px;
+
+            padding: 30px 20px;
+        }
+
+        .closing p {
+            margin: 0;
+
+            color: #0d5139;
+
+            font-size: 25px;
+
+            font-weight: bold;
+
+            line-height: 2;
+        }
+
+
+        /* =========================
+           فٹر
+        ========================== */
+
+        footer {
+            margin-top: 60px;
+
+            padding: 35px 20px;
+
+            background: #06291e;
+
+            color: white;
+        }
+
+        .footer-brand {
+            color: #f4d77b;
+
+            font-size: 23px;
+
+            font-weight: bold;
+        }
+
+        footer p {
+            margin: 8px 0;
+
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           موبائل
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            .brand {
+                font-size: 37px;
+            }
+
+            .company {
+                font-size: 18px;
+            }
+
+            .tagline {
+                font-size: 25px;
+            }
+
+            .tagline-small {
+                font-size: 20px;
+            }
+
+            .intro p {
+                font-size: 18px;
+            }
+
+            .trust-message {
+                font-size: 21px;
+            }
+
+            .section-title {
+                font-size: 29px;
+            }
+
+            .closing p {
+                font-size: 21px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         ہیرو
+    ========================== -->
+
+    <header class="hero">
+
+        <h1 class="brand">
+            الماثور فوڈز
+        </h1>
+
+        <div class="company">
+            (پرائیویٹ) پشاور
+        </div>
+
+        <div class="gold-line"></div>
+
+        <div class="tagline">
+            ذائقے اور معیار کا پائیدار رشتہ
+        </div>
+
+        <div class="tagline-small">
+            کل بھی تھا، آج بھی ہے۔
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         تعارف
+    ========================== -->
+
+    <section class="intro">
+
+        <p>
+            معیار ہمارے لیے محض ایک وعدہ نہیں،
+            ایک روایت ہے۔
+            خالص ذائقے، بہترین انتخاب اور معیاری پیکنگ
+            کے ساتھ
+            <strong>الماثور فوڈز</strong>
+            اسی روایت کو آگے بڑھا رہا ہے۔
+        </p>
+
+        <div class="trust-message">
+
+            ہمارے نزدیک ہر پروڈکٹ کے ساتھ
+            ذائقہ بھی پیک ہوتا ہے،
+            وہ بھی بڑے اعتماد سے۔
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ترجیحات
+    ========================== -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+            ہماری ترجیحات
+        </h2>
+
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <h3>
+                    خالص ذائقہ
+                </h3>
+
+                <p>
+                    ذائقے میں خلوص
+                    اور مصنوعات کے انتخاب میں احتیاط۔
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    اعلیٰ معیار
+                </h3>
+
+                <p>
+                    معیار کو ہر مرحلے پر
+                    بنیادی اہمیت دینا۔
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    اعتماد
+                </h3>
+
+                <p>
+                    آپ کا اعتماد
+                    ہمارا قیمتی اثاثہ ہے۔
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         اختتامی پیغام
+    ========================== -->
+
+    <section class="closing">
+
+        <p>
+            الماثور فوڈز — ذائقے اور معیار کا پائیدار رشتہ۔
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         فٹر
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-brand">
+            الماثور فوڈز (پرائیویٹ) پشاور
+        </div>
+
+        <p>
+            آپ کا اعتماد، ہمارا معیار۔
+        </p>
+
+        <p>
+            © 2026 All Rights Reserved
+        </p>
+
+    </footer>
+
+
+</body>
+
+  </html>
