@@ -110,6 +110,16 @@
             line-height: 2;
         }
 
+        /* visually indicate disabled placeholders */
+        .card[aria-disabled="true"] {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .card[aria-disabled="true"]:focus {
+            outline: 3px solid rgba(0,0,0,0.08);
+        }
+
         .back {
             display: inline-block;
 
@@ -211,7 +221,7 @@
 
         <!-- نوری باباجان ٹائر اور رم -->
 
-        <a href="#" class="card" aria-disabled="true" tabindex="-1" onclick="event.preventDefault();">
+        <a href="#" class="card" aria-disabled="true" onclick="event.preventDefault();" onkeydown="if(event.key === 'Enter'){event.preventDefault();}">
 
             <h2>
                 نوری باباجان ٹائر اور رم
@@ -226,7 +236,7 @@
 
         <!-- معمور چکی آٹا -->
 
-        <a href="#" class="card" aria-disabled="true" tabindex="-1" onclick="event.preventDefault();">
+        <a href="#" class="card" aria-disabled="true" onclick="event.preventDefault();" onkeydown="if(event.key === 'Enter'){event.preventDefault();}">
 
             <h2>
                 معمور چکی آٹا
@@ -241,7 +251,7 @@
 
         <!-- پشاوری اینٹ -->
 
-        <a href="#" class="card" aria-disabled="true" tabindex="-1" onclick="event.preventDefault();">
+        <a href="#" class="card" aria-disabled="true" onclick="event.preventDefault();" onkeydown="if(event.key === 'Enter'){event.preventDefault();}">
 
             <h2>
                 پشاوری اینٹ
