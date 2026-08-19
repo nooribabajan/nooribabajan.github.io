@@ -11,12 +11,34 @@
   --radius: 20px;
 }
 
-html{ box-sizing:border-box; font-family: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", serif; font-size:16px; direction: rtl; }
+html{
+  box-sizing:border-box;
+  font-family: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", serif;
+  font-size:16px;
+  direction: rtl;
+}
 *,*::before,*::after{ box-sizing:inherit }
 
-/* Skip link */
-.skip-link{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden }
-.skip-link:focus{ position:static; width:auto; height:auto; left:auto; padding:.5rem 1rem; background:#000; color:#fff; z-index:1000 }
+/* Skip link (uses logical properties for RTL/LTR) */
+.skip-link{
+  position:absolute;
+  inset-inline-start:-9999px; /* hides off-screen while respecting direction */
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+.skip-link:focus{
+  position:fixed;
+  inset-inline-start:1rem;
+  top:1rem;
+  width:auto;
+  height:auto;
+  padding:.5rem 1rem;
+  background:#000;
+  color:#fff;
+  z-index:1000;
+}
 
 body{ margin:0; background:var(--bg); color:var(--text); text-align:right; line-height:1.8 }
 
@@ -31,15 +53,37 @@ body{ margin:0; background:var(--bg); color:var(--text); text-align:right; line-
 .tagline-small{ margin-top:.5rem; font-size:1.05rem; color:var(--gold) }
 
 /* INTRO */
-.intro{ background:var(--card-bg); margin:-2.25rem auto 1.5rem; border-radius:1.375rem; padding:1.75rem; box-shadow:0 10px 30px rgba(0,0,0,0.08) }
+.intro{
+  background:var(--card-bg);
+  margin:-2.25rem auto 1.5rem;
+  border-radius: var(--radius);
+  padding:1.75rem;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
 .intro p{ font-size:1.125rem; margin:0; text-align:right }
 .trust-message{ margin-top:1.25rem; color:var(--brand-mid); font-size:1.125rem; font-weight:700 }
 
 /* SECTION / CARDS */
 .section-title{ color:var(--brand-mid); font-size:1.5rem; margin-bottom:1rem; text-align:right }
 .cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:1.25rem; margin-top:1rem; list-style:none; padding:0 }
-.card{ background:var(--card-bg); padding:1.5rem; border-radius:.9rem; box-shadow:0 7px 22px rgba(0,0,0,0.08); border-top:4px solid var(--gold); text-align:right; transition: transform .18s ease, box-shadow .18s ease; }
-.card:focus-within, .card:hover{ transform:translateY(-4px); box-shadow:0 14px 30px rgba(0,0,0,0.12) }
+
+/* Use --radius for consistency; fixed truncated transition and added box-shadow transition */
+.card{
+  background:var(--card-bg);
+  padding:1.5rem;
+  border-radius: calc(var(--radius) * 0.7);
+  box-shadow:0 7px 22px rgba(0,0,0,0.08);
+  border-top:4px solid var(--gold);
+  text-align:right;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+/* Ensure keyboard users get same visual feedback as :hover */
+.card:focus, .card:focus-within, .card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 30px rgba(0,0,0,0.12);
+}
+
 .card h3{ margin:0 0 .5rem; color:var(--brand-mid); font-size:1.125rem }
 .card p{ margin:0; font-size:1rem; color:var(--text) }
 
@@ -57,5 +101,15 @@ footer p{ margin:.5rem 0; font-size:.95rem; text-align:right }
 :focus:not(:focus-visible){ outline: none; }
 :focus-visible{ outline:3px solid #ffd870; outline-offset:3px }
 
-/* Utility: visually hidden */
-.visually-hidden{ position:absolute !important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px); white-space:nowrap }
+/* Utility: visually hidden (accessible sr-only) */
+.visually-hidden{
+  position:absolute !important;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0, 0, 0, 0);
+  white-space:nowrap;
+  border:0;
+}
