@@ -11,7 +11,7 @@
   --radius: 20px;
 }
 
-html{ box-sizing:border-box; font-family: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", serif; font-size:16px; }
+html{ box-sizing:border-box; font-family: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", serif; font-size:16px; direction: rtl; }
 *,*::before,*::after{ box-sizing:inherit }
 
 /* Skip link */
@@ -38,7 +38,7 @@ body{ margin:0; background:var(--bg); color:var(--text); text-align:right; line-
 /* SECTION / CARDS */
 .section-title{ color:var(--brand-mid); font-size:1.5rem; margin-bottom:1rem; text-align:right }
 .cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:1.25rem; margin-top:1rem; list-style:none; padding:0 }
-.card{ background:var(--card-bg); padding:1.5rem; border-radius:.9rem; box-shadow:0 7px 22px rgba(0,0,0,0.08); border-top:4px solid var(--gold); text-align:right; transition:transform .18s ease, box-shadow .18s ease }
+.card{ background:var(--card-bg); padding:1.5rem; border-radius:.9rem; box-shadow:0 7px 22px rgba(0,0,0,0.08); border-top:4px solid var(--gold); text-align:right; transition: transform .18s ease, box-shadow .18s ease; }
 .card:focus-within, .card:hover{ transform:translateY(-4px); box-shadow:0 14px 30px rgba(0,0,0,0.12) }
 .card h3{ margin:0 0 .5rem; color:var(--brand-mid); font-size:1.125rem }
 .card p{ margin:0; font-size:1rem; color:var(--text) }
@@ -54,7 +54,8 @@ footer p{ margin:.5rem 0; font-size:.95rem; text-align:right }
 @media (max-width:600px){ .brand{ font-size:2.2rem } .tagline{ font-size:1.25rem } .intro p, .trust-message, .closing p{ font-size:1rem } }
 
 /* Focus visible for keyboard users */
-:focus{ outline:3px solid #ffd870; outline-offset:3px }
+:focus:not(:focus-visible){ outline: none; }
+:focus-visible{ outline:3px solid #ffd870; outline-offset:3px }
 
 /* Utility: visually hidden */
 .visually-hidden{ position:absolute !important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px); white-space:nowrap }
