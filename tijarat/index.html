@@ -7,184 +7,550 @@
 
     <title>تجارت — نوری باباجان</title>
 
+    <meta name="description"
+        content="نوری باباجان — تجارت، کاروباری منصوبوں اور معیاری مصنوعات کا تعارف۔">
+
     <style>
+
+        :root {
+            --green-dark: #06291e;
+            --green: #0d5139;
+            --green-light: #1b6b50;
+
+            --gold: #f4d77b;
+            --gold-dark: #c79d32;
+
+            --cream: #f5f0e5;
+            --paper: #fffdf8;
+            --text: #263238;
+
+            --radius: 22px;
+            --max-width: 1000px;
+        }
+
 
         * {
             box-sizing: border-box;
         }
 
-        body {
-            margin: 0;
-            background: #f4f0e7;
-            color: #263238;
-            font-family: "Noto Nastaliq Urdu",
-                         "Jameel Noori Nastaleeq",
-                         serif;
-            text-align: center;
+
+        html {
+            scroll-behavior: smooth;
         }
 
+
+        body {
+            margin: 0;
+
+            background:
+                radial-gradient(
+                    circle at top left,
+                    rgba(244, 215, 123, .12),
+                    transparent 35%
+                ),
+                var(--cream);
+
+            color: var(--text);
+
+            font-family:
+                "Noto Nastaliq Urdu",
+                "Jameel Noori Nastaleeq",
+                serif;
+
+            line-height: 2;
+
+            text-align: right;
+        }
+
+
+        /* HERO */
+
         header {
-            background: linear-gradient(
-                135deg,
-                #082b20,
-                #285c4d
-            );
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    var(--green-light),
+                    var(--green-dark) 70%
+                );
 
             color: white;
 
-            padding: 55px 20px 45px;
+            padding: 75px 20px 95px;
+
+            text-align: center;
         }
+
+
+        header::before {
+            content: "";
+
+            position: absolute;
+
+            width: 300px;
+            height: 300px;
+
+            border: 1px solid rgba(244, 215, 123, .22);
+
+            border-radius: 50%;
+
+            top: -150px;
+            left: -80px;
+        }
+
+
+        header::after {
+            content: "";
+
+            position: absolute;
+
+            width: 220px;
+            height: 220px;
+
+            border: 1px solid rgba(244, 215, 123, .16);
+
+            border-radius: 50%;
+
+            bottom: -120px;
+            right: -70px;
+        }
+
+
+        .hero-content {
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 850px;
+
+            margin: auto;
+        }
+
+
+        .hero-icon {
+            font-size: 42px;
+
+            margin-bottom: 5px;
+        }
+
 
         header h1 {
             margin: 0;
-            font-size: 44px;
-            line-height: 1.7;
+
+            font-size: clamp(3rem, 8vw, 5rem);
+
+            line-height: 1.4;
+
+            font-weight: 800;
         }
 
-        header p {
+
+        header .subtitle {
             margin: 10px 0 0;
-            font-size: 20px;
-            color: #f4d77b;
+
+            color: var(--gold);
+
+            font-size: 1.35rem;
         }
+
+
+        .gold-line {
+            width: 120px;
+            height: 4px;
+
+            margin: 25px auto;
+
+            background: var(--gold);
+
+            border-radius: 20px;
+        }
+
+
+        .tagline {
+            margin: 0;
+
+            font-size: clamp(1.5rem, 4vw, 2.3rem);
+
+            font-weight: 700;
+        }
+
+
+        .tagline-small {
+            margin: 5px 0 0;
+
+            color: var(--gold);
+
+            font-size: 1.1rem;
+        }
+
+
+        /* MAIN */
 
         .container {
-            max-width: 850px;
-            margin: 40px auto;
-            padding: 0 18px;
+            width: min(100% - 36px, var(--max-width));
+
+            margin-inline: auto;
         }
+
 
         .intro {
-            background: white;
-            padding: 25px 20px;
-            border-radius: 20px;
+            position: relative;
+
+            margin-top: -45px;
+
+            z-index: 5;
+
+            background: var(--paper);
+
+            padding: 38px 35px;
+
+            border-radius: var(--radius);
 
             box-shadow:
-                0 7px 20px rgba(0,0,0,0.08);
+                0 15px 45px rgba(0, 0, 0, .10);
 
-            margin-bottom: 30px;
+            text-align: center;
         }
+
+
+        .intro-label {
+            display: inline-block;
+
+            color: var(--gold-dark);
+
+            font-weight: 700;
+
+            border-bottom: 2px solid var(--gold);
+
+            padding-bottom: 2px;
+        }
+
+
+        .intro h2 {
+            margin: 8px 0 12px;
+
+            color: var(--green);
+
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+        }
+
 
         .intro p {
             margin: 0;
-            font-size: 19px;
-            line-height: 2;
+
+            font-size: 1.12rem;
         }
 
-        .card {
+
+        /* BUSINESS SECTION */
+
+        .business-section {
+            padding: 70px 0;
+        }
+
+
+        .section-heading {
+            text-align: center;
+
+            margin-bottom: 35px;
+        }
+
+
+        .section-heading span {
+            display: inline-block;
+
+            color: var(--gold-dark);
+
+            font-weight: 700;
+
+            border-bottom: 2px solid var(--gold);
+        }
+
+
+        .section-heading h2 {
+            margin: 5px 0;
+
+            color: var(--green);
+
+            font-size: clamp(2rem, 5vw, 2.8rem);
+        }
+
+
+        .section-heading p {
+            margin: 0;
+
+            font-size: 1rem;
+
+            color: #59635f;
+        }
+
+
+        /* CARDS */
+
+        .business-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .business-card {
+            position: relative;
+
             display: block;
 
-            background: white;
-            color: #263238;
+            overflow: hidden;
+
+            background: var(--paper);
+
+            color: var(--text);
 
             text-decoration: none;
 
-            margin: 20px 0;
-            padding: 30px 20px;
+            padding: 32px 28px;
 
-            border-radius: 20px;
+            min-height: 210px;
 
-            border-right: 5px solid #d4af37;
+            border-radius: var(--radius);
+
+            border-top: 5px solid var(--gold);
 
             box-shadow:
-                0 7px 20px rgba(0,0,0,0.08);
+                0 8px 30px rgba(0, 0, 0, .08);
 
-            transition: 0.2s;
+            transition:
+                transform .2s ease,
+                box-shadow .2s ease;
         }
 
-        .card:hover {
-            transform: translateY(-3px);
+
+        .business-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 16px 38px rgba(0, 0, 0, .13);
         }
 
-        .card h2 {
-            margin: 0 0 10px;
 
-            color: #173f35;
+        .business-card::after {
+            content: "";
 
-            font-size: 29px;
+            position: absolute;
+
+            width: 120px;
+            height: 120px;
+
+            border-radius: 50%;
+
+            background: rgba(244, 215, 123, .10);
+
+            left: -45px;
+            bottom: -45px;
         }
 
-        .card p {
+
+        .business-icon {
+            font-size: 35px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .business-card h3 {
+            margin: 0 0 8px;
+
+            color: var(--green);
+
+            font-size: 1.55rem;
+
+            line-height: 1.7;
+        }
+
+
+        .business-card p {
             margin: 0;
 
-            font-size: 18px;
-            line-height: 2;
+            font-size: 1rem;
+
+            color: #59635f;
         }
 
-        /* visually indicate disabled placeholders */
-        .card[aria-disabled="true"] {
-            opacity: 0.6;
-            cursor: not-allowed;
+
+        .active-card {
+            border-top-color: var(--green);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #fbf6e9
+                );
         }
 
-        .card[aria-disabled="true"]:focus {
-            outline: 3px solid rgba(0,0,0,0.08);
+
+        .active-card .status {
+            background: var(--green);
+
+            color: white;
         }
 
-        /* coming soon badge */
-        .coming-soon {
+
+        .status {
             display: inline-block;
-            background: #f4d77b;
-            color: #082b20;
-            padding: 4px 10px;
-            border-radius: 999px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-left: 8px;
+
+            margin-top: 18px;
+
+            padding: 4px 14px;
+
+            border-radius: 30px;
+
+            background: #eee6cd;
+
+            color: var(--green);
+
+            font-size: .85rem;
+
+            font-weight: 700;
         }
+
+
+        /* BACK BUTTON */
+
+        .back-wrapper {
+            text-align: center;
+
+            padding: 10px 0 55px;
+        }
+
 
         .back {
             display: inline-block;
 
-            margin: 35px 0;
+            padding: 12px 28px;
 
-            padding: 13px 28px;
+            background: var(--green);
 
-            background: #173f35;
             color: white;
 
             text-decoration: none;
 
             border-radius: 12px;
 
-            font-size: 18px;
+            font-size: 1.05rem;
+
+            transition: background .2s ease;
         }
+
+
+        .back:hover {
+            background: var(--green-light);
+        }
+
+
+        /* FOOTER */
 
         footer {
-            margin-top: 50px;
-
-            padding: 30px 20px;
-
-            background: #082b20;
+            background: var(--green-dark);
 
             color: white;
+
+            padding: 35px 20px;
+
+            text-align: center;
         }
+
+
+        .footer-brand {
+            color: var(--gold);
+
+            font-size: 1.2rem;
+
+            font-weight: 700;
+        }
+
 
         footer p {
-            margin: 5px 0;
-            font-size: 16px;
+            margin: 4px 0;
+
+            font-size: .9rem;
         }
 
-        @media (max-width: 600px) {
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 60px 18px 80px;
+            }
+
 
             header h1 {
-                font-size: 36px;
+                font-size: 3rem;
             }
 
-            header p {
-                font-size: 18px;
+
+            .hero-icon {
+                font-size: 35px;
             }
 
-            .card h2 {
-                font-size: 25px;
+
+            .tagline {
+                font-size: 1.5rem;
             }
 
-            .card p {
-                font-size: 17px;
+
+            .intro {
+                padding: 30px 22px;
+
+                margin-top: -35px;
             }
 
-            .coming-soon {
-                font-size: 13px;
-                padding: 3px 8px;
+
+            .business-section {
+                padding: 50px 0;
+            }
+
+
+            .business-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .business-card {
+                min-height: auto;
+
+                padding: 28px 24px;
+            }
+
+        }
+
+
+        @media (max-width: 400px) {
+
+            .container {
+                width: min(100% - 24px, var(--max-width));
+            }
+
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+
+            .intro p {
+                font-size: 1rem;
+            }
+
+
+            .business-card h3 {
+                font-size: 1.35rem;
             }
 
         }
@@ -197,118 +563,210 @@
 <body>
 
 
-    <header>
+<header>
+
+    <div class="hero-content">
+
+        <div class="hero-icon">
+            🏢
+        </div>
 
         <h1>
-            🏢 تجارت
+            تجارت
         </h1>
 
-        <p>
-            کاروبار اور تجارتی سرگرمیاں
+        <div class="subtitle">
+            نوری باباجان
+        </div>
+
+        <div class="gold-line"></div>
+
+        <p class="tagline">
+            دیانت، معیار اور اعتماد
         </p>
 
-    </header>
+        <p class="tagline-small">
+            کاروبار میں دیانت، معیار میں اعتماد
+        </p>
+
+    </div>
+
+</header>
 
 
-    <main class="container">
+<main>
 
 
-        <div class="intro">
+    <section class="intro container">
 
-            <p> کاروبار میں دیانت، معیار میں اعتماد
+        <span class="intro-label">
+            ہمارا تجارتی سفر
+        </span>
+
+        <h2>
+            کاروبار صرف لین دین کا نام نہیں
+        </h2>
+
+        <p>
+            ہمارے نزدیک کاروبار اعتماد، معیار اور ذمہ داری کا ایک پائیدار رشتہ ہے۔
+            ہماری کوشش ہے کہ ہر تجارتی سرگرمی میں دیانت کو بنیاد، معیار کو ترجیح
+            اور اعتماد کو اپنی اصل پہچان بنائیں۔
+        </p>
+
+    </section>
+
+
+    <section class="business-section container">
+
+        <div class="section-heading">
+
+            <span>
+                ہمارے کاروباری منصوبے
+            </span>
+
+            <h2>
+                ہماری پیشکش
+            </h2>
+
+            <p>
+                مختلف شعبوں میں ہماری تجارتی سرگرمیوں کا تعارف
             </p>
 
         </div>
 
 
-        <!-- الماثور فوڈز -->
-
-        <a href="https://nooribabajan.github.io/tijarat/al-mathoor-foods/" class="card">
-
-            <h2>
-                الماثور فوڈز (پرائیویٹ) پشاور
-            </h2>
-
-            <p>
-                خالص ذائقہ، اعلیٰ معیار اور پائیدار اعتماد
-            </p>
-
-        </a>
+        <div class="business-grid">
 
 
-        <!-- نوری باباجان ٹائر اور رم -->
+            <!-- الماثور فوڈز -->
 
-        <a href="#" class="card" aria-disabled="true" title="جلد آرہا ہے" onclick="event.preventDefault();" onkeydown="if(event.key === 'Enter'){event.preventDefault();}">
+            <a
+                href="https://nooribabajan.github.io/tijarat/al-mathoor-foods/"
+                class="business-card active-card"
+            >
 
-            <h2>
-                نوری باباجان ٹائر اور رم
-                <span class="coming-soon" aria-hidden="true">جلد آرہا ہے</span>
-            </h2>
+                <div class="business-icon">
+                    🍯
+                </div>
 
-            <p>
-                ٹائر اور رم
-            </p>
+                <h3>
+                    الماثور فوڈز (پرائیویٹ) پشاور
+                </h3>
 
-        </a>
+                <p>
+                    خالص ذائقہ، اعلیٰ معیار اور پائیدار اعتماد
+                </p>
 
+                <span class="status">
+                    صفحہ ملاحظہ کریں
+                </span>
 
-        <!-- معمور چکی آٹا -->
-
-        <a href="#" class="card" aria-disabled="true" title="جلد آرہا ہے" onclick="event.preventDefault();" onkeydown="if(event.key === 'Enter'){event.preventDefault();}">
-
-            <h2>
-                معمور چکی آٹا
-                <span class="coming-soon" aria-hidden="true">جلد آرہا ہے</span>
-            </h2>
-
-            <p>
-                معیاری چکی آٹا
-            </p>
-
-        </a>
+            </a>
 
 
-        <!-- پشاوری اینٹ -->
+            <!-- نوری باباجان ٹائر اور رم -->
 
-        <a href="#" class="card" aria-disabled="true" title="جلد آرہا ہے" onclick="event.preventDefault();" onkeydown="if(event.key === 'Enter'){event.preventDefault();}">
+            <div class="business-card">
 
-            <h2>
-                پشاوری اینٹ
-                <span class="coming-soon" aria-hidden="true">جلد آرہا ہے</span>
-            </h2>
+                <div class="business-icon">
+                    🚗
+                </div>
 
-            <p>
-                تعمیراتی اینٹ
-            </p>
+                <h3>
+                    نوری باباجان ٹائر اور رم
+                </h3>
 
-        </a>
+                <p>
+                    معیاری ٹائر اور رم
+                </p>
+
+                <span class="status">
+                    جلد آرہا ہے
+                </span>
+
+            </div>
 
 
-        <!-- مرکزی صفحہ -->
+            <!-- معمور چکی آٹا -->
+
+            <div class="business-card">
+
+                <div class="business-icon">
+                    🌾
+                </div>
+
+                <h3>
+                    معمور چکی آٹا
+                </h3>
+
+                <p>
+                    معیاری چکی آٹا
+                </p>
+
+                <span class="status">
+                    جلد آرہا ہے
+                </span>
+
+            </div>
+
+
+            <!-- پشاوری اینٹ -->
+
+            <div class="business-card">
+
+                <div class="business-icon">
+                    🧱
+                </div>
+
+                <h3>
+                    پشاوری اینٹ
+                </h3>
+
+                <p>
+                    تعمیراتی معیار کی پشاوری اینٹ
+                </p>
+
+                <span class="status">
+                    جلد آرہا ہے
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <div class="back-wrapper">
 
         <a href="../" class="back">
-
             ← مرکزی صفحہ
-
         </a>
 
+    </div>
 
-    </main>
+
+</main>
 
 
-    <footer>
+<footer>
 
-        <p>
-            نوری باباجان
-        </p>
+    <div class="footer-brand">
+        نوری باباجان
+    </div>
 
-        <p>
-            © 2026 All Rights Reserved
-        </p>
+    <p>
+        کاروبار میں دیانت، معیار میں اعتماد
+    </p>
 
-    </footer>
+    <p>
+        © 2026 تمام حقوق محفوظ ہیں
+    </p>
+
+</footer>
 
 
 </body>
 
-</html>
+    </html>
