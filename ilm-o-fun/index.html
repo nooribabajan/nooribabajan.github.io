@@ -1,8 +1,17 @@
-<!DOCTYPE html><html lang="ur" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
 
-<title>علم و فن — نوری باباجان</title><meta name="description"
-content="علم و فن — علم، ادب، فکر اور تخلیقی اظہار">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>علم و فن — نوری باباجان</title>
+
+<meta name="description"
+      content="علم و فن — علم، ادب، فکر اور تخلیقی اظہار">
 
 <style>
 
@@ -212,11 +221,6 @@ header p {
 
     line-height: 2.65;
 
-    /*
-       صرف متن ہے۔
-       کوئی input یا contenteditable نہیں۔
-    */
-
     user-select: text;
 }
 
@@ -311,59 +315,86 @@ header p {
     font-weight: bold;
 }
 
-.share-buttons {
 
-    display: flex;
+/* =========================
+   MULTI-COLOR SHARE BUTTON
+========================= */
 
-    flex-wrap: wrap;
+.multi-share-button {
 
-    justify-content: center;
+    width: 100%;
 
-    gap: 8px;
-}
+    min-height: 72px;
 
-.share-button {
-
-    display: inline-block;
-
-    padding:
-        7px 12px;
+    padding: 10px 15px;
 
     border: none;
 
-    border-radius: 9px;
-
-    text-decoration: none;
+    border-radius: 15px;
 
     cursor: pointer;
 
+    color: white;
+
     font-family: inherit;
 
-    font-size: .82rem;
+    background:
+        linear-gradient(
+            90deg,
+            #1f8f55 0%,
+            #229ed9 33%,
+            #1877f2 66%,
+            #8c6b22 100%
+        );
 
-    font-weight: bold;
+    box-shadow:
+        0 5px 16px
+        rgba(0,0,0,.15);
 
-    color: white;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease;
 }
 
-.share-whatsapp {
-    background: #1f8f55;
+.multi-share-button:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 22px
+        rgba(0,0,0,.20);
 }
 
-.share-facebook {
-    background: #1877f2;
+.multi-share-button:active {
+
+    transform:
+        translateY(0);
 }
 
-.share-x {
-    background: #111111;
+.multi-share-button span {
+
+    font-size: 1.35rem;
 }
 
-.share-telegram {
-    background: #229ed9;
+.multi-share-button strong {
+
+    font-size: 1.05rem;
 }
 
-.share-copy {
-    background: #8c6b22;
+.multi-share-button small {
+
+    font-size: .72rem;
+
+    opacity: .95;
 }
 
 
@@ -563,7 +594,6 @@ footer p {
 
 /* =========================
    TABLET / MOBILE
-   20 / 80 برقرار رہے گا
 ========================= */
 
 @media (max-width: 900px) {
@@ -620,8 +650,7 @@ footer p {
 
 
 /* =========================
-   چھوٹی موبائل اسکرین
-   Tabs پھر بھی دائیں 20%
+   MOBILE
 ========================= */
 
 @media (max-width: 600px) {
@@ -717,24 +746,29 @@ footer p {
             5px 2px;
     }
 
-    .share-buttons {
+    .multi-share-button {
 
-        gap: 5px;
+        min-height: 62px;
+
+        padding: 8px 8px;
+
+        gap: 6px;
     }
 
-    .share-button {
+    .multi-share-button strong {
 
-        font-size: .65rem;
+        font-size: .9rem;
+    }
 
-        padding:
-            6px 7px;
+    .multi-share-button small {
+
+        font-size: .58rem;
     }
 }
 
 
 /* =========================
    انتہائی چھوٹی اسکرین
-   20 / 80 پھر بھی برقرار
 ========================= */
 
 @media (max-width: 380px) {
@@ -783,380 +817,394 @@ footer p {
 
         font-size: .48rem;
     }
+
+    .multi-share-button {
+
+        min-height: 55px;
+
+        padding: 6px 4px;
+
+        gap: 4px;
+    }
+
+    .multi-share-button span {
+
+        font-size: .9rem;
+    }
+
+    .multi-share-button strong {
+
+        font-size: .65rem;
+    }
+
+    .multi-share-button small {
+
+        display: none;
+    }
 }
 
-</style></head><body><!-- =========================
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
      HEADER
-========================= --><header><h1>
-    🌿 علم و فن
-</h1>
+========================= -->
 
-<div class="gold-line"></div>
+<header>
 
-<p>
-    علم، ادب، فکر اور تخلیق
-</p>
+    <h1>
+        🌿 علم و فن
+    </h1>
 
-</header><!-- =========================
+    <div class="gold-line"></div>
+
+    <p>
+        علم، ادب، فکر اور تخلیق
+    </p>
+
+</header>
+
+
+
+<!-- =========================
      MAIN 80 / 20
-========================= --><main class="main-layout"><!-- =====================
-     بائیں 80%
-====================== -->
+========================= -->
 
-<section class="poem-column">
+<main class="main-layout">
 
-    <article class="poem-area">
 
+    <!-- =====================
+         بائیں 80%
+    ====================== -->
 
-        <div class="poem-header">
+    <section class="poem-column">
 
-            <div class="poem-symbol">
-                🌹
-            </div>
+        <article class="poem-area">
 
-            <h2>
-                ماں جی
-            </h2>
 
-            <p>
-                ایک بیٹے کی اپنی ماں کے نام
-            </p>
+            <div class="poem-header">
 
-        </div>
+                <div class="poem-symbol">
+                    🌹
+                </div>
 
+                <h2>
+                    ماں جی
+                </h2>
 
+                <p>
+                    ایک بیٹے کی اپنی ماں کے نام
+                </p>
 
-        <!--
-            نظم Read Only ہے۔
-            یہاں کوئی editable field نہیں۔
-        -->
-
-        <div class="poem">
-
-
-            <p>
-                جب یاد تیری آتی ہے، ماں<br>
-                لگتا ہے جان جاتی ہے، ماں
-            </p>
-
-
-            <p>
-                شب بھر نہ سو سکا، صبح ہونے کے خوف سے<br>
-                صبح جو تیری موت کی خبر لاتی ہے، ماں
-            </p>
-
-
-            <p>
-                خواہ شبِ جمعہ ہو یا ہو جمعہ کا دن<br>
-                ایک درد سے روح کانپتی ہے، ماں
-            </p>
-
-
-            <p>
-                ممکن نہیں کہ کوئی چکا دے بدلہ<br>
-                تکلیف جو ہر شب اٹھاتی ہے، ماں
-            </p>
-
-
-            <div class="separator"></div>
-
-
-            <p>
-                میں نے بچپن میں گوٹیاں کھیلیں<br>
-                اور تُو نے ساری سختیاں جھیلیں
-            </p>
-
-
-            <p>
-                میں نے جب جب بھی کوئی آہ بھری<br>
-                یا کسی شے کی طلب میں کوئی چاہ بھری
-            </p>
-
-
-            <p>
-                تُو نے دیا ہر پل مجھ کو سہارا، ماں جی<br>
-                جیسے بھنور کے بیچ میں کنارا، ماں جی
-            </p>
-
-
-            <p>
-                میں جو اک خاک کا پتلا تھا کبھی<br>
-                تیرے ہی دم سے بن گیا انساں، ماں جی
-            </p>
-
-
-            <p>
-                یہ تیرے خون کا ہی ثمر تھا کہ میں نے<br>
-                زندگی میں جو کچھ بھی بنایا ماں جی
-            </p>
-
-
-            <p>
-                یہ میں، میرے بچے اور میرا گھر<br>
-                یہ سب ہیں تیری عطا، ماں جی
-            </p>
-
-
-            <p>
-                میں ہر وقت تیری دعاؤں کے حصار میں رہا<br>
-                میں جیون میں جہاں جہاں بھی گیا، ماں جی
-            </p>
-
-
-            <div class="separator"></div>
-
-
-            <p>
-                خود کو مصروف رکھنے کے لیے<br>
-                پاگل پن پر اتر آیا ہوں<br>
-                ماں، تیرے جانے کے بعد<br>
-                میں بہت گھبرایا ہوں
-            </p>
-
-
-            <p>
-                میرے انداز، میرے تیور بدل گئے ہیں سارے<br>
-                حرام ہے جو کبھی ایک دن بھی اترایا ہوں
-            </p>
-
-
-            <p>
-                جو کبھی تجھ سے پلک اٹھا کر بات کی<br>
-                آج ہر ایک لمحے پر پچھتایا ہوں
-            </p>
-
-
-            <p>
-                آج تیری ضرورت پہلے سے کہیں زیادہ ہے<br>
-                مجھ سے ہر شخص نے کیا کنارہ، ماں جی
-            </p>
-
-
-            <p>
-                مجھ کو دے پھر سے سہارا، ماں جی<br>
-                میں آج کل ہوں بہت بے سہارا، ماں جی
-            </p>
-
-
-            <p>
-                ایک بار پھر میری زندگی میں آ، ماں جی<br>
-                ہو سکے تو مجھے گلے سے لگا، ماں جی
-            </p>
-
-
-            <p>
-                آج تیری ہر بات رلاتی ہے، ماں<br>
-                آج تیری یاد بہت آتی ہے، ماں
-            </p>
-
-
-        </div>
-
-
-
-        <!-- =====================
-             CREDIT
-        ====================== -->
-
-        <div class="poem-credit">
-
-            <strong>
-                (Anonymous)
-            </strong>
-
-            <div class="poem-date">
-                اشاعت: 21 اگست 2026
-            </div>
-
-        </div>
-
-
-
-        <!-- =====================
-             SHARE
-        ====================== -->
-
-        <div class="share-box">
-
-            <div class="share-title">
-                📤 نظم شیئر کریں
             </div>
 
 
-            <div class="share-buttons">
+
+            <!-- نظم Read Only -->
+
+            <div class="poem">
 
 
-                <!--
-                    WhatsApp:
-                    مکمل عنوان + نظم + کریڈٹ + تاریخ + صفحے کا لنک
-                    JavaScript خود تیار کرے گا۔
-                -->
-
-                <button
-                    type="button"
-                    class="share-button share-whatsapp"
-                    onclick="shareOnWhatsApp()"
-                >
-                    WhatsApp
-                </button>
+                <p>
+                    جب یاد تیری آتی ہے، ماں<br>
+                    لگتا ہے جان جاتی ہے، ماں
+                </p>
 
 
-                <a
-                    class="share-button share-facebook"
-                    href="https://www.facebook.com/sharer/sharer.php?u="
-                    target="_blank"
-                    rel="noopener"
-                >
-                    Facebook
-                </a>
+                <p>
+                    شب بھر نہ سو سکا، صبح ہونے کے خوف سے<br>
+                    صبح جو تیری موت کی خبر لاتی ہے، ماں
+                </p>
 
 
-                <a
-                    class="share-button share-x"
-                    href="https://twitter.com/intent/tweet?text=%D9%85%D8%A7%DA%BA%20%DA%86%DB%8C"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    X
-                </a>
+                <p>
+                    خواہ شبِ جمعہ ہو یا ہو جمعہ کا دن<br>
+                    ایک درد سے روح کانپتی ہے، ماں
+                </p>
 
 
-                <a
-                    class="share-button share-telegram"
-                    href="https://t.me/share/url?url=&text=%D9%85%D8%A7%DA%BA%20%D8%AC%DB%8C"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    Telegram
-                </a>
+                <p>
+                    ممکن نہیں کہ کوئی چکا دے بدلہ<br>
+                    تکلیف جو ہر شب اٹھاتی ہے، ماں
+                </p>
+
+
+                <div class="separator"></div>
+
+
+                <p>
+                    میں نے بچپن میں گوٹیاں کھیلیں<br>
+                    اور تُو نے ساری سختیاں جھیلیں
+                </p>
+
+
+                <p>
+                    میں نے جب جب بھی کوئی آہ بھری<br>
+                    یا کسی شے کی طلب میں کوئی چاہ بھری
+                </p>
+
+
+                <p>
+                    تُو نے دیا ہر پل مجھ کو سہارا، ماں جی<br>
+                    جیسے بھنور کے بیچ میں کنارا، ماں جی
+                </p>
+
+
+                <p>
+                    میں جو اک خاک کا پتلا تھا کبھی<br>
+                    تیرے ہی دم سے بن گیا انساں، ماں جی
+                </p>
+
+
+                <p>
+                    یہ تیرے خون کا ہی ثمر تھا کہ میں نے<br>
+                    زندگی میں جو کچھ بھی بنایا ماں جی
+                </p>
+
+
+                <p>
+                    یہ میں، میرے بچے اور میرا گھر<br>
+                    یہ سب ہیں تیری عطا، ماں جی
+                </p>
+
+
+                <p>
+                    میں ہر وقت تیری دعاؤں کے حصار میں رہا<br>
+                    میں جیون میں جہاں جہاں بھی گیا، ماں جی
+                </p>
+
+
+                <div class="separator"></div>
+
+
+                <p>
+                    خود کو مصروف رکھنے کے لیے<br>
+                    پاگل پن پر اتر آیا ہوں<br>
+                    ماں، تیرے جانے کے بعد<br>
+                    میں بہت گھبرایا ہوں
+                </p>
+
+
+                <p>
+                    میرے انداز، میرے تیور بدل گئے ہیں سارے<br>
+                    حرام ہے جو کبھی ایک دن بھی اترایا ہوں
+                </p>
+
+
+                <p>
+                    جو کبھی تجھ سے پلک اٹھا کر بات کی<br>
+                    آج ہر ایک لمحے پر پچھتایا ہوں
+                </p>
+
+
+                <p>
+                    آج تیری ضرورت پہلے سے کہیں زیادہ ہے<br>
+                    مجھ سے ہر شخص نے کیا کنارہ، ماں جی
+                </p>
+
+
+                <p>
+                    مجھ کو دے پھر سے سہارا، ماں جی<br>
+                    میں آج کل ہوں بہت بے سہارا، ماں جی
+                </p>
+
+
+                <p>
+                    ایک بار پھر میری زندگی میں آ، ماں جی<br>
+                    ہو سکے تو مجھے گلے سے لگا، ماں جی
+                </p>
+
+
+                <p>
+                    آج تیری ہر بات رلاتی ہے، ماں<br>
+                    آج تیری یاد بہت آتی ہے، ماں
+                </p>
+
+
+            </div>
+
+
+
+            <!-- =====================
+                 CREDIT
+            ====================== -->
+
+            <div class="poem-credit">
+
+                <strong>
+                    (Anonymous)
+                </strong>
+
+                <div class="poem-date">
+                    اشاعت: 21 اگست 2026
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================
+                 SINGLE SHARE
+            ====================== -->
+
+            <div class="share-box">
+
+                <div class="share-title">
+                    📤 نظم شیئر کریں
+                </div>
 
 
                 <button
                     type="button"
-                    class="share-button share-copy"
-                    onclick="copyPageLink()"
+                    class="multi-share-button"
+                    onclick="sharePoem()"
                 >
-                    🔗 لنک کاپی
-                </button>
 
+                    <span>
+                        📤
+                    </span>
+
+                    <strong>
+                        Share
+                    </strong>
+
+                    <small>
+                        WhatsApp • Telegram • Facebook • دیگر
+                    </small>
+
+                </button>
 
             </div>
 
-        </div>
 
+        </article>
 
-    </article>
-
-</section>
+    </section>
 
 
 
-<!-- =====================
-     دائیں 20%
-====================== -->
+    <!-- =====================
+         دائیں 20%
+    ====================== -->
 
-<aside class="tabs-column">
+    <aside class="tabs-column">
 
-    <nav class="tabs">
-
-
-        <div class="tabs-title">
-            📚 علم و فن
-        </div>
+        <nav class="tabs">
 
 
-        <a
-            href="noor-hidayat/"
-            class="tab"
-        >
-
-            <span class="tab-icon">
-                🌙
-            </span>
-
-            <span class="tab-title">
-                نوری باباجان
-            </span>
-
-            <span class="tab-description">
-                نورِ ہدایت
-            </span>
-
-        </a>
+            <div class="tabs-title">
+                📚 علم و فن
+            </div>
 
 
-        <a
-            href="abu-masoor/"
-            class="tab"
-        >
+            <a
+                href="noor-hidayat/"
+                class="tab"
+            >
 
-            <span class="tab-icon">
-                ✍️
-            </span>
+                <span class="tab-icon">
+                    🌙
+                </span>
 
-            <span class="tab-title">
-                ابو ماثور
-            </span>
+                <span class="tab-title">
+                    نوری باباجان
+                </span>
 
-            <span class="tab-description">
-                نثر و مضامین
-            </span>
+                <span class="tab-description">
+                    نورِ ہدایت
+                </span>
 
-        </a>
-
-
-        <a
-            href="majzoob/"
-            class="tab"
-        >
-
-            <span class="tab-icon">
-                🖋️
-            </span>
-
-            <span class="tab-title">
-                مجذوب
-            </span>
-
-            <span class="tab-description">
-                غزلیں و نظمیں
-            </span>
-
-        </a>
+            </a>
 
 
-        <a
-            href="../"
-            class="back"
-        >
-            ← مرکزی صفحہ
-        </a>
+            <a
+                href="abu-masoor/"
+                class="tab"
+            >
+
+                <span class="tab-icon">
+                    ✍️
+                </span>
+
+                <span class="tab-title">
+                    ابو ماثور
+                </span>
+
+                <span class="tab-description">
+                    نثر و مضامین
+                </span>
+
+            </a>
 
 
-    </nav>
+            <a
+                href="majzoob/"
+                class="tab"
+            >
 
-</aside>
+                <span class="tab-icon">
+                    🖋️
+                </span>
 
-</main><!-- =========================
+                <span class="tab-title">
+                    مجذوب
+                </span>
+
+                <span class="tab-description">
+                    غزلیں و نظمیں
+                </span>
+
+            </a>
+
+
+            <a
+                href="../"
+                class="back"
+            >
+                ← مرکزی صفحہ
+            </a>
+
+
+        </nav>
+
+    </aside>
+
+
+</main>
+
+
+
+<!-- =========================
      FOOTER
-========================= --><footer><div class="footer-brand">
-    © 2026 نوری باباجان
-</div>
+========================= -->
 
-<p>
-    علم، ادب، فکر اور تخلیق
-</p>
+<footer>
+
+    <div class="footer-brand">
+        © 2026 نوری باباجان
+    </div>
+
+    <p>
+        علم، ادب، فکر اور تخلیق
+    </p>
 
 </footer>
-   
-            <script>
+
+
+
+<script>
 
 /* =========================
-   مکمل Share System
-   Native Share → WhatsApp
+   UNIVERSAL SHARE
+   Native Share → WhatsApp Fallback
 ========================= */
 
-async function shareOnWhatsApp() {
+async function sharePoem() {
 
     const title =
         document.querySelector(".poem-header h2")
@@ -1188,29 +1236,37 @@ async function shareOnWhatsApp() {
 
 
     /* =========================
-       مکمل شیئر متن
+       مکمل Share Text
     ========================= */
 
     const shareText =
-        "🌹 " + title +
+
+        "🌹 " +
+        title +
+
         "\n" +
+
         subtitle +
+
         "\n\n" +
+
         poem +
+
         "\n\n" +
+
         credit +
+
         "\n" +
+
         date +
+
         "\n\n" +
-        "📚 علم و فن — نوری باباجان" +
-        "\n" +
-        pageLink;
+
+        "📚 علم و فن — نوری باباجان";
 
 
     /* =========================
-       موبائل Native Share
-       اس سے مکمل متن Share Sheet
-       میں جائے گا
+       Native Mobile Share
     ========================= */
 
     if (navigator.share) {
@@ -1220,7 +1276,9 @@ async function shareOnWhatsApp() {
             await navigator.share({
 
                 title:
-                    title + " — " + subtitle,
+                    title +
+                    " — " +
+                    subtitle,
 
                 text:
                     shareText,
@@ -1237,8 +1295,8 @@ async function shareOnWhatsApp() {
         catch (error) {
 
             /*
-               صارف نے Share Sheet بند کردی
-               تو کوئی error message نہیں۔
+               اگر صارف Share Sheet بند کردے
+               تو کچھ نہیں ہوگا۔
             */
 
             if (
@@ -1256,54 +1314,39 @@ async function shareOnWhatsApp() {
 
 
     /* =========================
-       Fallback:
-       WhatsApp
+       WhatsApp Fallback
     ========================= */
 
     const whatsappURL =
+
         "https://wa.me/?text=" +
+
         encodeURIComponent(
-            shareText
+
+            shareText +
+
+            "\n\n" +
+
+            pageLink
+
         );
 
+
     window.open(
+
         whatsappURL,
+
         "_blank",
+
         "noopener,noreferrer"
+
     );
 
 }
 
+</script>
 
-/* =========================
-   Copy Page Link
-========================= */
 
-async function copyPageLink() {
+</body>
 
-    const pageLink =
-        window.location.href;
-
-    try {
-
-        await navigator.clipboard.writeText(
-            pageLink
-        );
-
-        alert(
-            "صفحے کا لنک کاپی ہوگیا۔"
-        );
-
-    }
-
-    catch (error) {
-
-        alert(
-            "لنک کاپی نہیں ہوسکا۔"
-        );
-
-    }
-
-}
-
-            </script>
+   </html>
