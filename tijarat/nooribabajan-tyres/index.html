@@ -630,7 +630,96 @@ footer p {
 }
 
 </style>
+<style>
 
+.order-form-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.65);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.order-form-box {
+    width: 100%;
+    max-width: 520px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 18px;
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+.order-form-box label {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.order-form-box input,
+.order-form-box textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.order-form-box textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.item-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.item-option {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.item-option input {
+    width: auto !important;
+}
+
+.close-order-form {
+    float: left;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.submit-order-button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+</style>
 </head>
 
 
