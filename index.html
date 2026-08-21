@@ -2,992 +2,162 @@
 <html lang="ur" dir="rtl">
 
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
-<title>علم و فن — نوری باباجان</title>
-
-<meta name="description"
-      content="علم و فن — علم، ادب، فکر اور تخلیقی اظہار">
-
-
-<style>
-
-/* =========================
-   BASIC
-========================= */
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-
-    margin: 0;
-
-    background: #f4f0e7;
-
-    color: #263238;
-
-    font-family:
-        "Noto Nastaliq Urdu",
-        "Jameel Noori Nastaleeq",
-        serif;
-
-    line-height: 2;
-
-    text-align: right;
-}
-
-
-/* =========================
-   HEADER
-========================= */
-
-header {
-
-    background:
-        linear-gradient(
-            135deg,
-            #173f35,
-            #285c4d
-        );
-
-    color: white;
-
-    padding:
-        42px 20px 35px;
-
-    text-align: center;
-
-    box-shadow:
-        0 6px 20px
-        rgba(0,0,0,.10);
-}
-
-header h1 {
-
-    margin: 0;
-
-    color: #f4d77b;
-
-    font-size:
-        clamp(2.2rem, 6vw, 3.2rem);
-
-    line-height: 1.5;
-}
-
-header p {
-
-    margin:
-        5px 0 0;
-
-    font-size:
-        clamp(1rem, 2.5vw, 1.2rem);
-
-    color: white;
-}
-
-.gold-line {
-
-    width: 90px;
-
-    height: 4px;
-
-    margin:
-        12px auto 0;
-
-    background: #f4d77b;
-
-    border-radius: 20px;
-}
-
-
-/* =========================
-   MAIN LAYOUT
-   RIGHT = 20%
-   LEFT  = 80%
-========================= */
-
-.main-layout {
-
-    width: 100%;
-
-    max-width: 1400px;
-
-    margin:
-        25px auto 45px;
-
-    padding:
-        0 18px;
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 4fr)
-        minmax(150px, 1fr);
-
-    gap: 18px;
-
-    align-items: start;
-}
-
-
-/* =========================
-   POEM — LEFT 80%
-========================= */
-
-.poem-area {
-
-    width: 100%;
-
-    background: #fffdf8;
-
-    border:
-        1px solid
-        rgba(199,157,50,.35);
-
-    border-radius: 22px;
-
-    padding:
-        28px 32px 38px;
-
-    box-shadow:
-        0 8px 28px
-        rgba(0,0,0,.08);
-
-    min-width: 0;
-}
-
-
-/* =========================
-   POEM HEADER
-========================= */
-
-.poem-header {
-
-    text-align: center;
-
-    margin-bottom: 22px;
-}
-
-.poem-symbol {
-
-    font-size: 1.8rem;
-
-    line-height: 1.3;
-}
-
-.poem-header h2 {
-
-    margin: 0;
-
-    color: #173f35;
-
-    font-size:
-        clamp(2rem, 5vw, 2.8rem);
-
-    line-height: 1.5;
-}
-
-.poem-header p {
-
-    margin: 0;
-
-    color: #8c6b22;
-
-    font-size: 1rem;
-
-    font-weight: bold;
-}
-
-
-/* =========================
-   POEM
-========================= */
-
-.poem {
-
-    max-width: 850px;
-
-    margin: auto;
-
-    text-align: center;
-
-    font-size:
-        clamp(1rem, 2vw, 1.2rem);
-
-    line-height: 2.65;
-}
-
-.poem p {
-
-    margin:
-        0 0 18px;
-}
-
-
-/* =========================
-   SEPARATOR
-========================= */
-
-.separator {
-
-    width: 65px;
-
-    height: 2px;
-
-    margin:
-        25px auto;
-
-    background: #c79d32;
-
-    opacity: .7;
-}
-
-
-/* =========================
-   CREDIT
-========================= */
-
-.poem-credit {
-
-    margin-top: 28px;
-
-    padding-top: 16px;
-
-    border-top:
-        1px solid #e5dcc9;
-
-    text-align: center;
-}
-
-.poem-credit strong {
-
-    color: #173f35;
-
-    font-size: 1rem;
-}
-
-.poem-date {
-
-    color: #8c6b22;
-
-    font-size: .9rem;
-
-    margin-top: 3px;
-}
-
-
-/* =========================
-   RIGHT SIDEBAR — 20%
-========================= */
-
-.tabs {
-
-    width: 100%;
-
-    max-width: 210px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 9px;
-
-    position: sticky;
-
-    top: 15px;
-
-    justify-self: end;
-}
-
-
-/* =========================
-   SIDEBAR TITLE
-========================= */
-
-.tabs-title {
-
-    background:
-        linear-gradient(
-            135deg,
-            #173f35,
-            #285c4d
-        );
-
-    color: #f4d77b;
-
-    padding:
-        8px 5px;
-
-    border-radius: 11px;
-
-    text-align: center;
-
-    font-size: .9rem;
-
-    font-weight: bold;
-}
-
-
-/* =========================
-   TABS
-========================= */
-
-.tab {
-
-    display: block;
-
-    width: 100%;
-
-    min-height: 70px;
-
-    background: #ffffff;
-
-    color: #263238;
-
-    text-decoration: none;
-
-    padding:
-        7px 6px;
-
-    border-radius: 11px;
-
-    border-right:
-        3px solid #c79d32;
-
-    box-shadow:
-        0 3px 12px
-        rgba(0,0,0,.07);
-
-    text-align: center;
-
-    transition:
-        .2s ease;
-}
-
-.tab:hover {
-
-    transform:
-        translateX(-3px);
-
-    box-shadow:
-        0 6px 16px
-        rgba(0,0,0,.11);
-}
-
-
-/* ICON */
-
-.tab-icon {
-
-    display: block;
-
-    font-size: 1.25rem;
-
-    line-height: 1.3;
-}
-
-
-/* TITLE */
-
-.tab-title {
-
-    display: block;
-
-    color: #173f35;
-
-    font-size: .9rem;
-
-    font-weight: bold;
-
-    line-height: 1.5;
-}
-
-
-/* DESCRIPTION */
-
-.tab-description {
-
-    display: block;
-
-    color: #66716d;
-
-    font-size: .6rem;
-
-    line-height: 1.45;
-}
-
-
-/* =========================
-   BACK BUTTON
-========================= */
-
-.back {
-
-    display: block;
-
-    width: 100%;
-
-    padding:
-        8px 5px;
-
-    background: #173f35;
-
-    color: white;
-
-    text-decoration: none;
-
-    border-radius: 10px;
-
-    text-align: center;
-
-    font-size: .78rem;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-
-    background: #173f35;
-
-    color: white;
-
-    text-align: center;
-
-    padding:
-        28px 20px;
-
-    margin-top: 20px;
-}
-
-.footer-brand {
-
-    color: #f4d77b;
-
-    font-size: 1.15rem;
-
-    font-weight: bold;
-}
-
-footer p {
-
-    margin:
-        4px 0 0;
-
-    font-size: .9rem;
-}
-
-
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 900px) {
-
-    .main-layout {
-
-        grid-template-columns:
-            minmax(0, 3.5fr)
-            minmax(130px, 1fr);
-
-        gap: 12px;
-
-        padding:
-            0 12px;
-    }
-
-    .tabs {
-
-        max-width: 165px;
-    }
-
-    .tab {
-
-        min-height: 65px;
-
-        padding:
-            6px 4px;
-    }
-
-    .tab-icon {
-
-        font-size: 1.1rem;
-    }
-
-    .tab-title {
-
-        font-size: .8rem;
-    }
-
-    .tab-description {
-
-        font-size: .52rem;
-    }
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 700px) {
-
-    .main-layout {
-
-        display: flex;
-
-        flex-direction: column;
-
-        padding:
-            0 12px;
-
-        margin-top: 18px;
-    }
-
-
-    /* tabs پہلے */
-
-    .tabs {
-
-        position: static;
-
-        order: 1;
-
-        width: 100%;
-
-        max-width: none;
-
-        display: grid;
-
-        grid-template-columns:
-            repeat(3, 1fr);
-
-        gap: 8px;
-    }
-
-
-    .tabs-title {
-
-        grid-column:
-            1 / -1;
-    }
-
-
-    .tab {
-
-        min-height: 68px;
-
-        border-right: none;
-
-        border-top:
-            3px solid #c79d32;
-
-        padding:
-            7px 4px;
-    }
-
-
-    .tab-description {
-
-        display: none;
-    }
-
-
-    /* نظم بعد میں */
-
-    .poem-area {
-
-        order: 2;
-
-        width: 100%;
-
-        padding:
-            24px 14px 30px;
-
-        border-radius: 18px;
-    }
-
-
-    .poem {
-
-        font-size: .98rem;
-
-        line-height: 2.4;
-    }
-
-
-    .poem p {
-
-        margin-bottom: 14px;
-    }
-}
-
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media (max-width: 430px) {
-
-    .tabs {
-
-        grid-template-columns:
-            1fr;
-    }
-
-    .tab {
-
-        min-height: auto;
-
-        padding:
-            10px;
-    }
-
-    .tab-description {
-
-        display: block;
-
-        font-size: .65rem;
-    }
-
-    .poem-area {
-
-        padding:
-            22px 11px 28px;
-    }
-
-    .poem {
-
-        font-size: .95rem;
-
-        line-height: 2.3;
-    }
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>نوری باباجان</title>
+
+    <meta name="description"
+        content="نوری باباجان — علم و فن اور تجارت کی ایک ذاتی ویب دنیا">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f4f0e7;
+            color: #263238;
+            font-family: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", serif;
+            text-align: center;
+        }
+
+        header {
+            background: linear-gradient(135deg, #173f35, #285c4d);
+            color: white;
+            padding: 60px 20px 45px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 46px;
+        }
+
+        header p {
+            margin: 15px 0 0;
+            font-size: 21px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 35px auto;
+            padding: 0 18px;
+        }
+
+        .welcome {
+            background: white;
+            padding: 30px 22px;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 35px;
+        }
+
+        .welcome h2 {
+            margin-top: 0;
+            color: #173f35;
+            font-size: 30px;
+        }
+
+        .welcome p {
+            font-size: 18px;
+            line-height: 2.1;
+        }
+
+        .section-title {
+            color: #173f35;
+            font-size: 32px;
+            margin: 38px 0 20px;
+        }
+
+        .main-card {
+            display: block;
+            text-decoration: none;
+            color: white;
+            background: #285c4d;
+            padding: 35px 20px;
+            margin: 20px 0;
+            border-radius: 22px;
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .main-card h2 {
+            margin: 0 0 10px;
+            font-size: 34px;
+        }
+
+        .main-card p {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        footer {
+            margin-top: 55px;
+            padding: 28px 20px;
+            background: #173f35;
+            color: white;
+            font-size: 15px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 38px;
+            }
+
+            header p {
+                font-size: 18px;
+            }
+
+            .main-card h2 {
+                font-size: 29px;
+            }
+        }
+    </style>
 </head>
-
 
 <body>
 
+    <header>
+        <h1>نوری باباجان</h1>
+        <p>حرف، خیال، احساس، علم و فن</p>
+    </header>
 
-<!-- =========================
-     HEADER
-========================= -->
+    <main class="container">
 
-<header>
-
-    <h1>
-        🌿 علم و فن
-    </h1>
-
-    <div class="gold-line"></div>
-
-    <p>
-        علم، ادب، فکر اور تخلیق
-    </p>
-
-</header>
-
-
-
-<!-- =========================
-     MAIN
-========================= -->
-
-<main class="main-layout">
-
-
-    <!-- =====================
-         LEFT — 80%
-    ====================== -->
-
-    <article class="poem-area">
-
-
-        <div class="poem-header">
-
-            <div class="poem-symbol">
-                🌹
-            </div>
-
-            <h2>
-                ماں جی
-            </h2>
+        <section class="welcome">
+            <h2>خوش آمدید</h2>
 
             <p>
-                ایک بیٹے کی اپنی ماں کے نام
+                یہ ویب سائٹ علم، فن، فکر، تخلیق اور تجارت سے جڑی
+                ایک ذاتی دنیا ہے۔
+                یہاں تحریر، شاعری، ادب، دینی فکر اور کاروباری سرگرمیوں
+                کو ایک جگہ پیش کیا جائے گا۔
             </p>
+        </section>
 
-        </div>
 
+        <h2 class="section-title">🌿 علم و فن</h2>
 
-
-        <div class="poem">
-
-
-            <p>
-                جب یاد تیری آتی ہے، ماں<br>
-                لگتا ہے جان جاتی ہے، ماں
-            </p>
-
-
-            <p>
-                شب بھر نہ سو سکا، صبح ہونے کے خوف سے<br>
-                صبح جو تیری موت کی خبر لاتی ہے، ماں
-            </p>
-
-
-            <p>
-                خواہ شبِ جمعہ ہو یا ہو جمعہ کا دن<br>
-                ایک درد سے روح کانپتی ہے، ماں
-            </p>
-
-
-            <p>
-                ممکن نہیں کہ کوئی چکا دے بدلہ<br>
-                تکلیف جو ہر شب اٹھاتی ہے، ماں
-            </p>
-
-
-            <div class="separator"></div>
-
-
-            <p>
-                میں نے بچپن میں گوٹیاں کھیلیں<br>
-                اور تُو نے ساری سختیاں جھیلیں
-            </p>
-
-
-            <p>
-                میں نے جب جب بھی کوئی آہ بھری<br>
-                یا کسی شے کی طلب میں کوئی چاہ بھری
-            </p>
-
-
-            <p>
-                تُو نے دیا ہر پل مجھ کو سہارا، ماں جی<br>
-                جیسے بھنور کے بیچ میں کنارا، ماں جی
-            </p>
-
-
-            <p>
-                میں جو اک خاک کا پتلا تھا کبھی<br>
-                تیرے ہی دم سے بن گیا انساں، ماں جی
-            </p>
-
-
-            <p>
-                یہ تیرے خون کا ہی ثمر تھا کہ میں نے<br>
-                زندگی میں جو کیا، کیا، ماں جی
-            </p>
-
-
-            <p>
-                یہ میں، میرے بچے اور میرا گھر<br>
-                یہ سب ہیں تیری عطا، ماں جی
-            </p>
-
-
-            <p>
-                میں ہر وقت تیری دعاؤں کے حصار میں رہا<br>
-                میں جیون میں جہاں جہاں بھی گیا، ماں جی
-            </p>
-
-
-            <div class="separator"></div>
-
-
-            <p>
-                خود کو مصروف رکھنے کے لیے<br>
-                پاگل پن پر اتر آیا ہوں
-            </p>
-
-
-            <p>
-                ماں، تیرے جانے کے بعد<br>
-                میں بہت گھبرایا ہوں
-            </p>
-
-
-            <p>
-                میرے انداز، میرے تیور بدل گئے ہیں سارے<br>
-                حرام ہے جو کبھی ایک دن بھی اترایا ہوں
-            </p>
-
-
-            <p>
-                جو کبھی تجھ سے پلک اٹھا کر بات کی<br>
-                آج ہر ایک لمحے پر پچھتایا ہوں
-            </p>
-
-
-            <p>
-                آج تیری ضرورت پہلے سے کہیں زیادہ ہے<br>
-                مجھ سے ہر شخص نے کیا کنارہ، ماں جی
-            </p>
-
-
-            <p>
-                مجھ کو دے پھر سے سہارا، ماں جی<br>
-                میں آج کل ہوں بہت بے سہارا، ماں جی
-            </p>
-
-
-            <p>
-                ایک بار پھر میری زندگی میں آ، ماں جی<br>
-                ہو سکے تو مجھے گلے سے لگا، ماں جی
-            </p>
-
-
-            <p>
-                آج تیری ہر بات رلاتی ہے، ماں<br>
-                آج تیری یاد بہت آتی ہے، ماں
-            </p>
-
-
-        </div>
-
-
-
-        <div class="poem-credit">
-
-            <strong>
-                — Anonymous
-            </strong>
-
-            <div class="poem-date">
-                اشاعت: 21 اگست 2026
-            </div>
-
-        </div>
-
-
-    </article>
-
-
-
-    <!-- =====================
-         RIGHT — 20%
-    ====================== -->
-
-    <aside class="tabs">
-
-
-        <div class="tabs-title">
-            📚 علم و فن
-        </div>
-
-
-
-        <a
-            href="noor-hidayat/"
-            class="tab"
-        >
-
-            <span class="tab-icon">
-                🌙
-            </span>
-
-            <span class="tab-title">
-                نوری باباجان
-            </span>
-
-            <span class="tab-description">
-                نورِ ہدایت
-            </span>
-
+        <a href="ilm-o-fun/" class="main-card">
+            <h2>علم و فن</h2>
+            <p>نورِ ہدایت، نثر، ناول، کہانیاں اور شاعری</p>
         </a>
 
 
+        <h2 class="section-title">🏢 تجارت</h2>
 
-        <a
-            href="abu-masoor/"
-            class="tab"
-        >
-
-            <span class="tab-icon">
-                ✍️
-            </span>
-
-            <span class="tab-title">
-                ابو ماثور
-            </span>
-
-            <span class="tab-description">
-                نثر اور مضامین
-            </span>
-
+        <a href="tijarat/" class="main-card">
+            <h2>تجارت</h2>
+            <p>کاروباری منصوبے، مصنوعات اور تجارتی سرگرمیاں</p>
         </a>
 
+    </main>
 
 
-        <a
-            href="majzoob/"
-            class="tab"
-        >
-
-            <span class="tab-icon">
-                🖋️
-            </span>
-
-            <span class="tab-title">
-                مجذوب
-            </span>
-
-            <span class="tab-description">
-                غزلیں اور نظمیں
-            </span>
-
-        </a>
-
-
-
-        <a
-            href="../"
-            class="back"
-        >
-            ← مرکزی صفحہ
-        </a>
-
-
-    </aside>
-
-
-</main>
-
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-    <div class="footer-brand">
+    <footer>
         © 2026 نوری باباجان
-    </div>
-
-    <p>
-        علم، ادب، فکر اور تخلیق
-    </p>
-
-</footer>
-
+    </footer>
 
 </body>
 
-    </html>
+</html>
