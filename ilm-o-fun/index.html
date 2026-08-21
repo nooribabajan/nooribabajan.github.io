@@ -1147,14 +1147,15 @@ footer p {
     علم، ادب، فکر اور تخلیق
 </p>
 
-</footer><script>
+</footer>
+<script>
 
 /* =========================
-   WhatsApp Share
-   مکمل نظم خود صفحے سے حاصل ہوگی
+   مکمل Share System
+   Native Share → WhatsApp
 ========================= */
 
-function shareOnWhatsApp() {
+async function shareOnWhatsApp() {
 
     const title =
         document.querySelector(".poem-header h2")
@@ -1184,8 +1185,13 @@ function shareOnWhatsApp() {
     const pageLink =
         window.location.href;
 
+
+    /* =========================
+       مکمل شیئر متن
+    ========================= */
+
     const shareText =
-        title +
+        "🌹 " + title +
         "\n" +
         subtitle +
         "\n\n" +
@@ -1195,18 +1201,76 @@ function shareOnWhatsApp() {
         "\n" +
         date +
         "\n\n" +
-        "علم و فن — نوری باباجان\n" +
+        "📚 علم و فن — نوری باباجان" +
+        "\n" +
         pageLink;
+
+
+    /* =========================
+       موبائل Native Share
+       اس سے مکمل متن Share Sheet
+       میں جائے گا
+    ========================= */
+
+    if (navigator.share) {
+
+        try {
+
+            await navigator.share({
+
+                title:
+                    title + " — " + subtitle,
+
+                text:
+                    shareText,
+
+                url:
+                    pageLink
+
+            });
+
+            return;
+
+        }
+
+        catch (error) {
+
+            /*
+               صارف نے Share Sheet بند کردی
+               تو کوئی error message نہیں۔
+            */
+
+            if (
+                error.name ===
+                "AbortError"
+            ) {
+
+                return;
+
+            }
+
+        }
+
+    }
+
+
+    /* =========================
+       Fallback:
+       WhatsApp
+    ========================= */
 
     const whatsappURL =
         "https://wa.me/?text=" +
-        encodeURIComponent(shareText);
+        encodeURIComponent(
+            shareText
+        );
 
     window.open(
         whatsappURL,
         "_blank",
-        "noopener"
+        "noopener,noreferrer"
     );
+
 }
 
 
@@ -1214,27 +1278,31 @@ function shareOnWhatsApp() {
    Copy Page Link
 ========================= */
 
-function copyPageLink() {
+async function copyPageLink() {
 
     const pageLink =
         window.location.href;
 
-    navigator.clipboard.writeText(pageLink)
-        .then(function() {
+    try {
 
-            alert(
-                "صفحے کا لنک کاپی ہوگیا۔"
-            );
+        await navigator.clipboard.writeText(
+            pageLink
+        );
 
-        })
-        .catch(function() {
+        alert(
+            "صفحے کا لنک کاپی ہوگیا۔"
+        );
 
-            alert(
-                "لنک کاپی نہیں ہوسکا۔"
-            );
+    }
 
-        });
+    catch (error) {
+
+        alert(
+            "لنک کاپی نہیں ہوسکا۔"
+        );
+
+    }
 
 }
 
-</script></body></html>
+</script>
