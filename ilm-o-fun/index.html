@@ -3,637 +3,680 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-    <title>علم و فن — نوری باباجان</title>
+<title>علم و فن — نوری باباجان</title>
 
-    <meta name="description"
-          content="علم و فن — علم، ادب، فکر اور تخلیقی اظہار">
+<meta name="description"
+      content="علم و فن — علم، ادب، فکر اور تخلیقی اظہار">
 
-    <style>
 
-        * {
-            box-sizing: border-box;
-        }
+<style>
 
-        html {
-            scroll-behavior: smooth;
-        }
+/* =========================
+   BASIC
+========================= */
 
-        body {
+* {
+    box-sizing: border-box;
+}
 
-            margin: 0;
+html {
+    scroll-behavior: smooth;
+}
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #f4f0e7,
-                    #eee7d8
-                );
+body {
 
-            color: #263238;
+    margin: 0;
 
-            font-family:
-                "Noto Nastaliq Urdu",
-                "Jameel Noori Nastaleeq",
-                serif;
+    background: #f4f0e7;
 
-            line-height: 2;
+    color: #263238;
 
-            text-align: right;
-        }
+    font-family:
+        "Noto Nastaliq Urdu",
+        "Jameel Noori Nastaleeq",
+        serif;
 
+    line-height: 2;
 
-        /* =========================
-           HEADER
-        ========================= */
+    text-align: right;
+}
 
-        header {
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #173f35,
-                    #285c4d
-                );
+/* =========================
+   HEADER
+========================= */
 
-            color: white;
+header {
 
-            padding:
-                45px 20px 38px;
+    background:
+        linear-gradient(
+            135deg,
+            #173f35,
+            #285c4d
+        );
 
-            text-align: center;
+    color: white;
 
-            box-shadow:
-                0 8px 25px
-                rgba(0,0,0,.12);
-        }
+    padding:
+        42px 20px 35px;
 
+    text-align: center;
 
-        header h1 {
+    box-shadow:
+        0 6px 20px
+        rgba(0,0,0,.10);
+}
 
-            margin: 0;
+header h1 {
 
-            color: #f4d77b;
+    margin: 0;
 
-            font-size:
-                clamp(2.3rem, 7vw, 3.3rem);
+    color: #f4d77b;
 
-            line-height: 1.6;
-        }
+    font-size:
+        clamp(2.2rem, 6vw, 3.2rem);
 
+    line-height: 1.5;
+}
 
-        header p {
+header p {
 
-            margin:
-                8px 0 0;
+    margin:
+        5px 0 0;
 
-            color: white;
+    font-size:
+        clamp(1rem, 2.5vw, 1.2rem);
 
-            font-size:
-                clamp(1rem, 3vw, 1.2rem);
-        }
+    color: white;
+}
 
+.gold-line {
 
-        .gold-line {
+    width: 90px;
 
-            width: 100px;
+    height: 4px;
 
-            height: 4px;
+    margin:
+        12px auto 0;
 
-            margin:
-                15px auto 0;
+    background: #f4d77b;
 
-            background: #f4d77b;
+    border-radius: 20px;
+}
 
-            border-radius: 20px;
-        }
 
+/* =========================
+   MAIN LAYOUT
+   RIGHT = 20%
+   LEFT  = 80%
+========================= */
 
-        /* =========================
-           MAIN AREA
-           4/5 CONTENT + 1/5 TABS
-        ========================= */
+.main-layout {
 
-        .main-layout {
+    width: 100%;
 
-            width: 100%;
+    max-width: 1400px;
 
-            max-width: 1400px;
+    margin:
+        25px auto 45px;
 
-            margin:
-                30px auto 50px;
+    padding:
+        0 18px;
 
-            padding:
-                0 22px;
+    display: grid;
 
-            display: grid;
+    grid-template-columns:
+        minmax(0, 4fr)
+        minmax(150px, 1fr);
 
-            grid-template-columns:
-                4fr 1fr;
+    gap: 18px;
 
-            gap: 24px;
+    align-items: start;
+}
 
-            align-items: start;
-        }
 
+/* =========================
+   POEM — LEFT 80%
+========================= */
 
-        /* =========================
-           POEM AREA — 4/5
-        ========================= */
+.poem-area {
 
-        .poem-area {
+    width: 100%;
 
-            background: #fffdf8;
+    background: #fffdf8;
 
-            border:
-                1px solid
-                rgba(199,157,50,.35);
+    border:
+        1px solid
+        rgba(199,157,50,.35);
 
-            border-radius: 24px;
+    border-radius: 22px;
 
-            padding:
-                32px 35px 42px;
+    padding:
+        28px 32px 38px;
 
-            box-shadow:
-                0 10px 32px
-                rgba(0,0,0,.09);
+    box-shadow:
+        0 8px 28px
+        rgba(0,0,0,.08);
 
-            min-width: 0;
-        }
+    min-width: 0;
+}
 
 
-        .poem-header {
+/* =========================
+   POEM HEADER
+========================= */
 
-            text-align: center;
+.poem-header {
 
-            margin-bottom: 25px;
-        }
+    text-align: center;
 
+    margin-bottom: 22px;
+}
 
-        .poem-symbol {
+.poem-symbol {
 
-            font-size: 2rem;
+    font-size: 1.8rem;
 
-            line-height: 1.4;
-        }
+    line-height: 1.3;
+}
 
+.poem-header h2 {
 
-        .poem-header h2 {
+    margin: 0;
 
-            margin:
-                0 0 2px;
+    color: #173f35;
 
-            color: #173f35;
+    font-size:
+        clamp(2rem, 5vw, 2.8rem);
 
-            font-size:
-                clamp(2rem, 5vw, 2.8rem);
+    line-height: 1.5;
+}
 
-            line-height: 1.6;
-        }
+.poem-header p {
 
+    margin: 0;
 
-        .poem-header p {
+    color: #8c6b22;
 
-            margin: 0;
+    font-size: 1rem;
 
-            color: #8c6b22;
+    font-weight: bold;
+}
 
-            font-size: 1.05rem;
 
-            font-weight: bold;
-        }
+/* =========================
+   POEM
+========================= */
 
+.poem {
 
-        .poem {
+    max-width: 850px;
 
-            max-width: 850px;
+    margin: auto;
 
-            margin: auto;
+    text-align: center;
 
-            text-align: center;
+    font-size:
+        clamp(1rem, 2vw, 1.2rem);
 
-            font-size:
-                clamp(1.05rem, 2vw, 1.25rem);
+    line-height: 2.65;
+}
 
-            line-height: 2.7;
-        }
+.poem p {
 
+    margin:
+        0 0 18px;
+}
 
-        .poem p {
 
-            margin:
-                0 0 19px;
-        }
+/* =========================
+   SEPARATOR
+========================= */
 
+.separator {
 
-        .separator {
+    width: 65px;
 
-            width: 75px;
+    height: 2px;
 
-            height: 2px;
+    margin:
+        25px auto;
 
-            background: #c79d32;
+    background: #c79d32;
 
-            margin:
-                28px auto;
+    opacity: .7;
+}
 
-            opacity: .7;
-        }
 
+/* =========================
+   CREDIT
+========================= */
 
-        .poem-credit {
+.poem-credit {
 
-            margin-top: 30px;
+    margin-top: 28px;
 
-            padding-top: 18px;
+    padding-top: 16px;
 
-            border-top:
-                1px solid #e5dcc9;
+    border-top:
+        1px solid #e5dcc9;
 
-            text-align: center;
-        }
+    text-align: center;
+}
 
+.poem-credit strong {
 
-        .poem-credit strong {
+    color: #173f35;
 
-            color: #173f35;
+    font-size: 1rem;
+}
 
-            font-size: 1.05rem;
-        }
+.poem-date {
 
+    color: #8c6b22;
 
-        .poem-date {
+    font-size: .9rem;
 
-            color: #8c6b22;
+    margin-top: 3px;
+}
 
-            font-size: .9rem;
 
-            margin-top: 4px;
-        }
+/* =========================
+   RIGHT SIDEBAR — 20%
+========================= */
 
+.tabs {
 
-        /* =========================
-           RIGHT SIDEBAR — 1/5
-        ========================= */
+    width: 100%;
 
-        .tabs {
+    max-width: 210px;
 
-            display: flex;
+    display: flex;
 
-            flex-direction: column;
+    flex-direction: column;
 
-            gap: 14px;
+    gap: 9px;
 
-            min-width: 0;
+    position: sticky;
 
-            position: sticky;
+    top: 15px;
 
-            top: 18px;
-        }
+    justify-self: end;
+}
 
 
-        .tabs-title {
+/* =========================
+   SIDEBAR TITLE
+========================= */
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #173f35,
-                    #285c4d
-                );
+.tabs-title {
 
-            color: #f4d77b;
+    background:
+        linear-gradient(
+            135deg,
+            #173f35,
+            #285c4d
+        );
 
-            padding:
-                15px 10px;
+    color: #f4d77b;
 
-            border-radius: 16px;
+    padding:
+        8px 5px;
 
-            text-align: center;
+    border-radius: 11px;
 
-            font-size: 1.15rem;
+    text-align: center;
 
-            font-weight: bold;
+    font-size: .9rem;
 
-            box-shadow:
-                0 6px 18px
-                rgba(0,0,0,.10);
-        }
+    font-weight: bold;
+}
 
 
-        .tab {
+/* =========================
+   TABS
+========================= */
 
-            display: block;
+.tab {
 
-            width: 100%;
+    display: block;
 
-            background: white;
+    width: 100%;
 
-            color: #263238;
+    min-height: 70px;
 
-            text-decoration: none;
+    background: #ffffff;
 
-            padding:
-                17px 13px;
+    color: #263238;
 
-            border-radius: 16px;
+    text-decoration: none;
 
-            border-right:
-                5px solid #c79d32;
+    padding:
+        7px 6px;
 
-            box-shadow:
-                0 5px 18px
-                rgba(0,0,0,.08);
+    border-radius: 11px;
 
-            transition:
-                .2s ease;
+    border-right:
+        3px solid #c79d32;
 
-            text-align: center;
-        }
+    box-shadow:
+        0 3px 12px
+        rgba(0,0,0,.07);
 
+    text-align: center;
 
-        .tab:hover {
+    transition:
+        .2s ease;
+}
 
-            transform:
-                translateX(-4px);
+.tab:hover {
 
-            box-shadow:
-                0 9px 23px
-                rgba(0,0,0,.13);
-        }
+    transform:
+        translateX(-3px);
 
+    box-shadow:
+        0 6px 16px
+        rgba(0,0,0,.11);
+}
 
-        .tab-icon {
 
-            display: block;
+/* ICON */
 
-            font-size: 1.8rem;
+.tab-icon {
 
-            line-height: 1.5;
-        }
+    display: block;
 
+    font-size: 1.25rem;
 
-        .tab-title {
+    line-height: 1.3;
+}
 
-            display: block;
 
-            color: #173f35;
+/* TITLE */
 
-            font-size: 1.15rem;
+.tab-title {
 
-            font-weight: bold;
-        }
+    display: block;
 
+    color: #173f35;
 
-        .tab-description {
+    font-size: .9rem;
 
-            display: block;
+    font-weight: bold;
 
-            margin-top: 2px;
+    line-height: 1.5;
+}
 
-            font-size: .78rem;
 
-            line-height: 1.8;
+/* DESCRIPTION */
 
-            color: #52615d;
-        }
+.tab-description {
 
+    display: block;
 
-        /* =========================
-           BACK
-        ========================= */
+    color: #66716d;
 
-        .back {
+    font-size: .6rem;
 
-            display: block;
+    line-height: 1.45;
+}
 
-            width: 100%;
 
-            padding:
-                12px 10px;
+/* =========================
+   BACK BUTTON
+========================= */
 
-            background: #173f35;
+.back {
 
-            color: white;
+    display: block;
 
-            text-decoration: none;
+    width: 100%;
 
-            border-radius: 13px;
+    padding:
+        8px 5px;
 
-            text-align: center;
+    background: #173f35;
 
-            font-size: .95rem;
+    color: white;
 
-            transition: .2s;
-        }
+    text-decoration: none;
 
+    border-radius: 10px;
 
-        .back:hover {
+    text-align: center;
 
-            background: #285c4d;
-        }
+    font-size: .78rem;
+}
 
 
-        /* =========================
-           FOOTER
-        ========================= */
+/* =========================
+   FOOTER
+========================= */
 
-        footer {
+footer {
 
-            background: #173f35;
+    background: #173f35;
 
-            color: white;
+    color: white;
 
-            text-align: center;
+    text-align: center;
 
-            padding:
-                28px 20px;
+    padding:
+        28px 20px;
 
-            margin-top: 20px;
-        }
+    margin-top: 20px;
+}
 
+.footer-brand {
 
-        .footer-brand {
+    color: #f4d77b;
 
-            color: #f4d77b;
+    font-size: 1.15rem;
 
-            font-size: 1.15rem;
+    font-weight: bold;
+}
 
-            font-weight: bold;
-        }
+footer p {
 
+    margin:
+        4px 0 0;
 
-        footer p {
+    font-size: .9rem;
+}
 
-            margin:
-                4px 0 0;
 
-            font-size: .9rem;
-        }
+/* =========================
+   TABLET
+========================= */
 
+@media (max-width: 900px) {
 
-        /* =========================
-           TABLET
-        ========================= */
+    .main-layout {
 
-        @media (max-width: 900px) {
+        grid-template-columns:
+            minmax(0, 3.5fr)
+            minmax(130px, 1fr);
 
-            .main-layout {
+        gap: 12px;
 
-                grid-template-columns:
-                    3fr 1fr;
+        padding:
+            0 12px;
+    }
 
-                gap: 16px;
+    .tabs {
 
-                padding:
-                    0 14px;
-            }
+        max-width: 165px;
+    }
 
+    .tab {
 
-            .poem-area {
+        min-height: 65px;
 
-                padding:
-                    28px 20px 35px;
-            }
+        padding:
+            6px 4px;
+    }
 
+    .tab-icon {
 
-            .tab {
+        font-size: 1.1rem;
+    }
 
-                padding:
-                    14px 8px;
-            }
+    .tab-title {
 
+        font-size: .8rem;
+    }
 
-            .tab-title {
+    .tab-description {
 
-                font-size: 1rem;
-            }
+        font-size: .52rem;
+    }
+}
 
 
-            .tab-description {
+/* =========================
+   MOBILE
+========================= */
 
-                font-size: .7rem;
-            }
-        }
+@media (max-width: 700px) {
 
+    .main-layout {
 
-        /* =========================
-           MOBILE
-        ========================= */
+        display: flex;
 
-        @media (max-width: 700px) {
+        flex-direction: column;
 
-            .main-layout {
+        padding:
+            0 12px;
 
-                display: flex;
+        margin-top: 18px;
+    }
 
-                flex-direction: column;
 
-                padding:
-                    0 12px;
+    /* tabs پہلے */
 
-                margin-top: 20px;
-            }
+    .tabs {
 
+        position: static;
 
-            .tabs {
+        order: 1;
 
-                position: static;
+        width: 100%;
 
-                width: 100%;
+        max-width: none;
 
-                order: 1;
+        display: grid;
 
-                display: grid;
+        grid-template-columns:
+            repeat(3, 1fr);
 
-                grid-template-columns:
-                    repeat(2, 1fr);
+        gap: 8px;
+    }
 
-                gap: 10px;
-            }
 
+    .tabs-title {
 
-            .tabs-title {
+        grid-column:
+            1 / -1;
+    }
 
-                grid-column:
-                    1 / -1;
-            }
 
+    .tab {
 
-            .tab {
+        min-height: 68px;
 
-                border-right: none;
+        border-right: none;
 
-                border-top:
-                    4px solid #c79d32;
+        border-top:
+            3px solid #c79d32;
 
-                padding:
-                    13px 8px;
-            }
+        padding:
+            7px 4px;
+    }
 
 
-            .tab:hover {
+    .tab-description {
 
-                transform:
-                    translateY(-3px);
-            }
+        display: none;
+    }
 
 
-            .poem-area {
+    /* نظم بعد میں */
 
-                order: 2;
+    .poem-area {
 
-                width: 100%;
+        order: 2;
 
-                padding:
-                    25px 15px 30px;
+        width: 100%;
 
-                border-radius: 20px;
-            }
+        padding:
+            24px 14px 30px;
 
+        border-radius: 18px;
+    }
 
-            .poem {
 
-                font-size: 1rem;
+    .poem {
 
-                line-height: 2.45;
-            }
+        font-size: .98rem;
 
+        line-height: 2.4;
+    }
 
-            .poem p {
 
-                margin-bottom: 15px;
-            }
-        }
+    .poem p {
 
+        margin-bottom: 14px;
+    }
+}
 
-        @media (max-width: 430px) {
 
-            .tabs {
+/* =========================
+   SMALL MOBILE
+========================= */
 
-                grid-template-columns: 1fr;
-            }
+@media (max-width: 430px) {
 
+    .tabs {
 
-            .poem-area {
+        grid-template-columns:
+            1fr;
+    }
 
-                padding:
-                    22px 12px 28px;
-            }
+    .tab {
 
+        min-height: auto;
 
-            .poem {
+        padding:
+            10px;
+    }
 
-                font-size: .98rem;
+    .tab-description {
 
-                line-height: 2.35;
-            }
-        }
+        display: block;
 
-    </style>
+        font-size: .65rem;
+    }
+
+    .poem-area {
+
+        padding:
+            22px 11px 28px;
+    }
+
+    .poem {
+
+        font-size: .95rem;
+
+        line-height: 2.3;
+    }
+}
+
+</style>
 
 </head>
 
@@ -662,17 +705,18 @@
 
 
 <!-- =========================
-     MAIN LAYOUT
+     MAIN
 ========================= -->
 
 <main class="main-layout">
 
 
-    <!-- =========================
-         4/5 — POEM
-    ========================= -->
+    <!-- =====================
+         LEFT — 80%
+    ====================== -->
 
     <article class="poem-area">
+
 
         <div class="poem-header">
 
@@ -689,6 +733,7 @@
             </p>
 
         </div>
+
 
 
         <div class="poem">
@@ -746,8 +791,9 @@
 
 
             <p>
-                یہ تیرے خون کا ہی ثمر تھا کہ میں نے<br>
-                زندگی میں جو کیا کیا، کیا، ماں جی
+        
+                 یہ تیرے ہی دعاؤں کا ثمر تھا کہ میں نے<br>
+                 زندگی میں جو کچھ بھی کیا ماں جی
             </p>
 
 
@@ -817,6 +863,7 @@
         </div>
 
 
+
         <div class="poem-credit">
 
             <strong>
@@ -829,19 +876,22 @@
 
         </div>
 
+
     </article>
 
 
 
-    <!-- =========================
-         1/5 — RIGHT TABS
-    ========================= -->
+    <!-- =====================
+         RIGHT — 20%
+    ====================== -->
 
     <aside class="tabs">
+
 
         <div class="tabs-title">
             📚 علم و فن
         </div>
+
 
 
         <a
@@ -858,7 +908,7 @@
             </span>
 
             <span class="tab-description">
-                نورِ ہدایت، قرآن، حدیث اور اصلاحی تحریریں
+                نورِ ہدایت
             </span>
 
         </a>
@@ -879,7 +929,7 @@
             </span>
 
             <span class="tab-description">
-                نثر، ناول، کہانیاں، سنہری یادیں اور مضامین
+                نثر اور مضامین
             </span>
 
         </a>
@@ -900,7 +950,7 @@
             </span>
 
             <span class="tab-description">
-                غزلیں، نظمیں اور دیگر شعری تخلیقات
+                غزلیں اور نظمیں
             </span>
 
         </a>
@@ -913,6 +963,7 @@
         >
             ← مرکزی صفحہ
         </a>
+
 
     </aside>
 
