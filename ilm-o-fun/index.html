@@ -13,10 +13,6 @@
 <meta name="description"
       content="علم و فن — علم، ادب، فکر اور تخلیقی اظہار">
 
-<!-- Font preconnect & example font link (replace with your hosted font if needed) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
 
 <style>
 
@@ -50,34 +46,6 @@ body {
     text-align: right;
 }
 
-/* Skip link (visually hidden, revealed on focus) */
-.skip-link {
-  position: absolute;
-  left: -9999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  z-index: 999;
-}
-.skip-link:focus {
-  left: 10px;
-  top: 10px;
-  width: auto;
-  height: auto;
-  padding: 8px 12px;
-  background: #173f35;
-  color: #f4d77b;
-  border-radius: 6px;
-  text-decoration: none;
-}
-
-/* Focus styles for keyboard users */
-a:focus, .tab:focus {
-  outline: 3px solid #f4d77b;
-  outline-offset: 3px;
-  border-radius: 8px;
-}
 
 /* =========================
    HEADER
@@ -162,7 +130,9 @@ header p {
 
     display: grid;
 
-    grid-template-columns: 80% 20%;
+    grid-template-columns:
+        minmax(0, 4fr)
+        minmax(150px, 1fr);
 
     gap: 18px;
 
@@ -324,9 +294,7 @@ header p {
 
     width: 100%;
 
-    max-width: none;
-
-    min-width: 150px;
+    max-width: 210px;
 
     display: flex;
 
@@ -406,16 +374,11 @@ header p {
         .2s ease;
 }
 
-/* direction-aware hover so the move feels natural in RTL/LTR */
-html:dir(ltr) .tab:hover {
-  transform: translateX(-3px);
-}
-
-html:dir(rtl) .tab:hover {
-  transform: translateX(3px);
-}
-
 .tab:hover {
+
+    transform:
+        translateX(-3px);
+
     box-shadow:
         0 6px 16px
         rgba(0,0,0,.11);
@@ -547,7 +510,7 @@ footer p {
 
     .tabs {
 
-        max-width: none;
+        max-width: 165px;
     }
 
     .tab {
@@ -720,7 +683,6 @@ footer p {
 
 <body>
 
-<a href="#main" class="skip-link">Skip to content</a>
 
 <!-- =========================
      HEADER
@@ -729,7 +691,7 @@ footer p {
 <header>
 
     <h1>
-        <span role="img" aria-label="leaf">🌿</span> علم و فن
+        🌿 علم و فن
     </h1>
 
     <div class="gold-line"></div>
@@ -746,7 +708,7 @@ footer p {
      MAIN
 ========================= -->
 
-<main id="main" class="main-layout">
+<main class="main-layout">
 
 
     <!-- =====================
@@ -758,7 +720,7 @@ footer p {
 
         <div class="poem-header">
 
-            <div class="poem-symbol" aria-hidden="true">
+            <div class="poem-symbol">
                 🌹
             </div>
 
@@ -923,11 +885,11 @@ footer p {
          RIGHT — 20%
     ====================== -->
 
-    <nav class="tabs" aria-label="علم و فن navigation">
+    <aside class="tabs">
 
 
         <div class="tabs-title">
-            <span aria-hidden="true">📚</span> علم و فن
+            📚 علم و فن
         </div>
 
 
@@ -937,7 +899,7 @@ footer p {
             class="tab"
         >
 
-            <span class="tab-icon" aria-hidden="true">
+            <span class="tab-icon">
                 🌙
             </span>
 
@@ -958,7 +920,7 @@ footer p {
             class="tab"
         >
 
-            <span class="tab-icon" aria-hidden="true">
+            <span class="tab-icon">
                 ✍️
             </span>
 
@@ -979,7 +941,7 @@ footer p {
             class="tab"
         >
 
-            <span class="tab-icon" aria-hidden="true">
+            <span class="tab-icon">
                 🖋️
             </span>
 
@@ -1003,7 +965,7 @@ footer p {
         </a>
 
 
-    </nav>
+    </aside>
 
 
 </main>
@@ -1029,4 +991,4 @@ footer p {
 
 </body>
 
-    </html>
+      </html>
