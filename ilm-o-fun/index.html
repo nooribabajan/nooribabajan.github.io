@@ -19,11 +19,9 @@
             box-sizing: border-box;
         }
 
-
         html {
             scroll-behavior: smooth;
         }
-
 
         body {
 
@@ -43,9 +41,9 @@
                 "Jameel Noori Nastaleeq",
                 serif;
 
-            text-align: right;
-
             line-height: 2;
+
+            text-align: right;
         }
 
 
@@ -65,7 +63,7 @@
             color: white;
 
             padding:
-                50px 20px 45px;
+                45px 20px 38px;
 
             text-align: center;
 
@@ -79,12 +77,12 @@
 
             margin: 0;
 
+            color: #f4d77b;
+
             font-size:
-                clamp(2.3rem, 7vw, 3.2rem);
+                clamp(2.3rem, 7vw, 3.3rem);
 
             line-height: 1.6;
-
-            color: #f4d77b;
         }
 
 
@@ -93,10 +91,10 @@
             margin:
                 8px 0 0;
 
+            color: white;
+
             font-size:
                 clamp(1rem, 3vw, 1.2rem);
-
-            color: white;
         }
 
 
@@ -107,7 +105,7 @@
             height: 4px;
 
             margin:
-                18px auto 0;
+                15px auto 0;
 
             background: #f4d77b;
 
@@ -116,151 +114,78 @@
 
 
         /* =========================
-           MAIN LAYOUT
+           MAIN AREA
+           4/5 CONTENT + 1/5 TABS
         ========================= */
 
-        .page-layout {
+        .main-layout {
 
-            max-width: 1200px;
+            width: 100%;
+
+            max-width: 1400px;
 
             margin:
-                40px auto;
+                30px auto 50px;
 
             padding:
-                0 20px;
+                0 22px;
 
             display: grid;
 
             grid-template-columns:
-                1fr 260px;
+                4fr 1fr;
 
-            gap: 30px;
+            gap: 24px;
 
             align-items: start;
         }
 
 
         /* =========================
-           MAIN CONTENT
+           POEM AREA — 4/5
         ========================= */
 
-        .main-content {
+        .poem-area {
+
+            background: #fffdf8;
+
+            border:
+                1px solid
+                rgba(199,157,50,.35);
+
+            border-radius: 24px;
+
+            padding:
+                32px 35px 42px;
+
+            box-shadow:
+                0 10px 32px
+                rgba(0,0,0,.09);
 
             min-width: 0;
         }
 
 
-        .intro {
-
-            background: #ffffff;
-
-            padding:
-                28px 25px;
-
-            border-radius: 22px;
-
-            box-shadow:
-                0 8px 25px
-                rgba(0,0,0,.08);
-
-            margin-bottom: 28px;
-
-            border-top:
-                4px solid #c79d32;
-        }
-
-
-        .intro h2 {
-
-            margin:
-                0 0 8px;
-
-            color: #173f35;
-
-            font-size: 1.8rem;
-        }
-
-
-        .intro p {
-
-            margin: 0;
-
-            font-size: 1.1rem;
-        }
-
-
-        /* =========================
-           POEM CARD
-        ========================= */
-
-        .poem-card {
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #fffdf8,
-                    #ffffff
-                );
-
-            border-radius: 25px;
-
-            padding:
-                35px 35px 40px;
-
-            box-shadow:
-                0 12px 35px
-                rgba(0,0,0,.10);
-
-            border:
-                1px solid
-                rgba(199,157,50,.25);
-
-            position: relative;
-
-            overflow: hidden;
-        }
-
-
-        .poem-card::before {
-
-            content: "";
-
-            position: absolute;
-
-            top: 0;
-            right: 0;
-
-            width: 7px;
-
-            height: 100%;
-
-            background:
-                linear-gradient(
-                    #f4d77b,
-                    #c79d32
-                );
-        }
-
-
-        .poem-heading {
+        .poem-header {
 
             text-align: center;
 
-            margin-bottom: 28px;
+            margin-bottom: 25px;
         }
 
 
-        .poem-heading .symbol {
+        .poem-symbol {
 
             font-size: 2rem;
 
-            margin-bottom: 4px;
+            line-height: 1.4;
         }
 
 
-        .poem-heading h2 {
+        .poem-header h2 {
 
-            margin: 0;
+            margin:
+                0 0 2px;
 
             color: #173f35;
 
@@ -271,10 +196,9 @@
         }
 
 
-        .poem-heading p {
+        .poem-header p {
 
-            margin:
-                0;
+            margin: 0;
 
             color: #8c6b22;
 
@@ -286,54 +210,46 @@
 
         .poem {
 
-            max-width: 720px;
+            max-width: 850px;
 
             margin: auto;
 
             text-align: center;
 
             font-size:
-                clamp(1.05rem, 2.5vw, 1.25rem);
+                clamp(1.05rem, 2vw, 1.25rem);
 
             line-height: 2.7;
-
-            color: #303b38;
         }
 
 
         .poem p {
 
             margin:
-                0 0 18px;
+                0 0 19px;
         }
 
 
-        .poem .couplet {
+        .separator {
 
-            margin-bottom: 25px;
-        }
-
-
-        .poem-separator {
-
-            width: 70px;
+            width: 75px;
 
             height: 2px;
 
-            margin:
-                25px auto;
+            background: #c79d32;
 
-            background: #d8b85d;
+            margin:
+                28px auto;
 
             opacity: .7;
         }
 
 
-        .poem-ending {
+        .poem-credit {
 
             margin-top: 30px;
 
-            padding-top: 20px;
+            padding-top: 18px;
 
             border-top:
                 1px solid #e5dcc9;
@@ -342,64 +258,68 @@
         }
 
 
-        .poem-ending strong {
-
-            display: block;
+        .poem-credit strong {
 
             color: #173f35;
 
-            font-size: 1.1rem;
+            font-size: 1.05rem;
         }
 
 
-        .publication-date {
-
-            margin-top: 5px;
+        .poem-date {
 
             color: #8c6b22;
 
-            font-size: .95rem;
+            font-size: .9rem;
+
+            margin-top: 4px;
         }
 
 
         /* =========================
-           RIGHT SIDE TABS
+           RIGHT SIDEBAR — 1/5
         ========================= */
 
-        .side-tabs {
-
-            position: sticky;
-
-            top: 20px;
+        .tabs {
 
             display: flex;
 
             flex-direction: column;
 
             gap: 14px;
+
+            min-width: 0;
+
+            position: sticky;
+
+            top: 18px;
         }
 
 
-        .side-title {
+        .tabs-title {
 
-            background: #173f35;
+            background:
+                linear-gradient(
+                    135deg,
+                    #173f35,
+                    #285c4d
+                );
 
             color: #f4d77b;
 
             padding:
-                15px 18px;
+                15px 10px;
 
-            border-radius:
-                16px;
+            border-radius: 16px;
 
             text-align: center;
 
-            font-size: 1.2rem;
+            font-size: 1.15rem;
 
             font-weight: bold;
 
             box-shadow:
-                0 6px 20px
+                0 6px 18px
                 rgba(0,0,0,.10);
         }
 
@@ -408,17 +328,18 @@
 
             display: block;
 
-            text-decoration: none;
-
-            color: #263238;
+            width: 100%;
 
             background: white;
 
-            padding:
-                18px 16px;
+            color: #263238;
 
-            border-radius:
-                16px;
+            text-decoration: none;
+
+            padding:
+                17px 13px;
+
+            border-radius: 16px;
 
             border-right:
                 5px solid #c79d32;
@@ -428,38 +349,20 @@
                 rgba(0,0,0,.08);
 
             transition:
-                transform .2s ease,
-                box-shadow .2s ease,
-                background .2s ease;
+                .2s ease;
+
+            text-align: center;
         }
 
 
         .tab:hover {
 
             transform:
-                translateX(-5px);
-
-            background: #fffdf7;
+                translateX(-4px);
 
             box-shadow:
-                0 10px 25px
+                0 9px 23px
                 rgba(0,0,0,.13);
-        }
-
-
-        .tab.active {
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #173f35,
-                    #285c4d
-                );
-
-            color: white;
-
-            border-right-color:
-                #f4d77b;
         }
 
 
@@ -469,13 +372,15 @@
 
             font-size: 1.8rem;
 
-            margin-bottom: 3px;
+            line-height: 1.5;
         }
 
 
         .tab-title {
 
             display: block;
+
+            color: #173f35;
 
             font-size: 1.15rem;
 
@@ -489,26 +394,26 @@
 
             margin-top: 2px;
 
-            font-size: .85rem;
+            font-size: .78rem;
 
             line-height: 1.8;
 
-            opacity: .85;
+            color: #52615d;
         }
 
 
         /* =========================
-           BACK BUTTON
+           BACK
         ========================= */
 
         .back {
 
             display: block;
 
-            margin-top: 8px;
+            width: 100%;
 
             padding:
-                13px 18px;
+                12px 10px;
 
             background: #173f35;
 
@@ -516,11 +421,11 @@
 
             text-decoration: none;
 
-            border-radius: 14px;
+            border-radius: 13px;
 
             text-align: center;
 
-            font-size: 1rem;
+            font-size: .95rem;
 
             transition: .2s;
         }
@@ -538,16 +443,16 @@
 
         footer {
 
-            margin-top: 50px;
-
-            padding:
-                28px 20px;
-
             background: #173f35;
 
             color: white;
 
             text-align: center;
+
+            padding:
+                28px 20px;
+
+            margin-top: 20px;
         }
 
 
@@ -571,35 +476,87 @@
 
 
         /* =========================
-           MOBILE
+           TABLET
         ========================= */
 
-        @media (max-width: 800px) {
+        @media (max-width: 900px) {
 
-            .page-layout {
+            .main-layout {
 
-                grid-template-columns: 1fr;
+                grid-template-columns:
+                    3fr 1fr;
 
-                margin-top: 25px;
+                gap: 16px;
+
+                padding:
+                    0 14px;
             }
 
 
-            .side-tabs {
+            .poem-area {
+
+                padding:
+                    28px 20px 35px;
+            }
+
+
+            .tab {
+
+                padding:
+                    14px 8px;
+            }
+
+
+            .tab-title {
+
+                font-size: 1rem;
+            }
+
+
+            .tab-description {
+
+                font-size: .7rem;
+            }
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .main-layout {
+
+                display: flex;
+
+                flex-direction: column;
+
+                padding:
+                    0 12px;
+
+                margin-top: 20px;
+            }
+
+
+            .tabs {
 
                 position: static;
 
-                order: -1;
+                width: 100%;
+
+                order: 1;
 
                 display: grid;
 
                 grid-template-columns:
                     repeat(2, 1fr);
 
-                gap: 12px;
+                gap: 10px;
             }
 
 
-            .side-title {
+            .tabs-title {
 
                 grid-column:
                     1 / -1;
@@ -608,13 +565,13 @@
 
             .tab {
 
-                text-align: center;
-
-                border-right:
-                    none;
+                border-right: none;
 
                 border-top:
                     4px solid #c79d32;
+
+                padding:
+                    13px 8px;
             }
 
 
@@ -625,60 +582,16 @@
             }
 
 
-            .back {
+            .poem-area {
 
-                margin-top: 5px;
-            }
+                order: 2;
 
-
-            .poem-card {
+                width: 100%;
 
                 padding:
-                    28px 20px 32px;
-            }
+                    25px 15px 30px;
 
-
-            .poem {
-
-                line-height: 2.5;
-            }
-        }
-
-
-        @media (max-width: 480px) {
-
-            header {
-
-                padding:
-                    38px 15px 32px;
-            }
-
-
-            .page-layout {
-
-                padding:
-                    0 12px;
-            }
-
-
-            .side-tabs {
-
-                grid-template-columns:
-                    1fr;
-            }
-
-
-            .tab {
-
-                padding:
-                    14px;
-            }
-
-
-            .poem-card {
-
-                padding:
-                    25px 16px 30px;
+                border-radius: 20px;
             }
 
 
@@ -686,13 +599,37 @@
 
                 font-size: 1rem;
 
-                line-height: 2.4;
+                line-height: 2.45;
             }
 
 
             .poem p {
 
                 margin-bottom: 15px;
+            }
+        }
+
+
+        @media (max-width: 430px) {
+
+            .tabs {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .poem-area {
+
+                padding:
+                    22px 12px 28px;
+            }
+
+
+            .poem {
+
+                font-size: .98rem;
+
+                line-height: 2.35;
             }
         }
 
@@ -725,210 +662,184 @@
 
 
 <!-- =========================
-     PAGE LAYOUT
+     MAIN LAYOUT
 ========================= -->
 
-<main class="page-layout">
+<main class="main-layout">
 
 
     <!-- =========================
-         MAIN CONTENT
+         4/5 — POEM
     ========================= -->
 
-    <section class="main-content">
+    <article class="poem-area">
 
+        <div class="poem-header">
 
-        <div class="intro">
+            <div class="poem-symbol">
+                🌹
+            </div>
 
             <h2>
-                علم و فن کا گوشہ
+                ماں جی
             </h2>
 
             <p>
-                علم و فن کا یہ گوشہ فکر، ادب، ہدایت
-                اور تخلیقی اظہار کے لیے مختص ہے۔
+                ایک بیٹے کی اپنی ماں کے نام
             </p>
 
         </div>
 
 
+        <div class="poem">
 
-        <!-- =========================
-             POEM
-        ========================= -->
 
-        <article class="poem-card">
+            <p>
+                جب یاد تیری آتی ہے، ماں<br>
+                لگتا ہے جان جاتی ہے، ماں
+            </p>
 
-            <div class="poem-heading">
 
-                <div class="symbol">
-                    🌹
-                </div>
+            <p>
+                شب بھر نہ سو سکا، صبح ہونے کے خوف سے<br>
+                صبح جو تیری موت کی خبر لاتی ہے، ماں
+            </p>
 
-                <h2>
-                    ماں جی
-                </h2>
 
-                <p>
-                    ایک بیٹے کی اپنی ماں کے نام
-                </p>
+            <p>
+                خواہ شبِ جمعہ ہو یا ہو جمعہ کا دن<br>
+                ایک درد سے روح کانپتی ہے، ماں
+            </p>
 
+
+            <p>
+                ممکن نہیں کہ کوئی چکا دے بدلہ<br>
+                تکلیف جو ہر شب اٹھاتی ہے، ماں
+            </p>
+
+
+            <div class="separator"></div>
+
+
+            <p>
+                میں نے بچپن میں گوٹیاں کھیلیں<br>
+                اور تُو نے ساری سختیاں جھیلیں
+            </p>
+
+
+            <p>
+                میں نے جب جب بھی کوئی آہ بھری<br>
+                یا کسی شے کی طلب میں کوئی چاہ بھری
+            </p>
+
+
+            <p>
+                تُو نے دیا ہر پل مجھ کو سہارا، ماں جی<br>
+                جیسے بھنور کے بیچ میں کنارا، ماں جی
+            </p>
+
+
+            <p>
+                میں جو اک خاک کا پتلا تھا کبھی<br>
+                تیرے ہی دم سے بن گیا انساں، ماں جی
+            </p>
+
+
+            <p>
+                یہ تیرے خون کا ہی ثمر تھا کہ میں نے<br>
+                زندگی میں جو کیا، کیا، ماں جی
+            </p>
+
+
+            <p>
+                یہ میں، میرے بچے اور میرا گھر<br>
+                یہ سب ہیں تیری عطا، ماں جی
+            </p>
+
+
+            <p>
+                میں ہر وقت تیری دعاؤں کے حصار میں رہا<br>
+                میں جیون میں جہاں جہاں بھی گیا، ماں جی
+            </p>
+
+
+            <div class="separator"></div>
+
+
+            <p>
+                خود کو مصروف رکھنے کے لیے<br>
+                پاگل پن پر اتر آیا ہوں
+            </p>
+
+
+            <p>
+                ماں، تیرے جانے کے بعد<br>
+                میں بہت گھبرایا ہوں
+            </p>
+
+
+            <p>
+                میرے انداز، میرے تیور بدل گئے ہیں سارے<br>
+                حرام ہے جو کبھی ایک دن بھی اترایا ہوں
+            </p>
+
+
+            <p>
+                جو کبھی تجھ سے پلک اٹھا کر بات کی<br>
+                آج ہر ایک لمحے پر پچھتایا ہوں
+            </p>
+
+
+            <p>
+                آج تیری ضرورت پہلے سے کہیں زیادہ ہے<br>
+                مجھ سے ہر شخص نے کیا کنارہ، ماں جی
+            </p>
+
+
+            <p>
+                مجھ کو دے پھر سے سہارا، ماں جی<br>
+                میں آج کل ہوں بہت بے سہارا، ماں جی
+            </p>
+
+
+            <p>
+                ایک بار پھر میری زندگی میں آ، ماں جی<br>
+                ہو سکے تو مجھے گلے سے لگا، ماں جی
+            </p>
+
+
+            <p>
+                آج تیری ہر بات رلاتی ہے، ماں<br>
+                آج تیری یاد بہت آتی ہے، ماں
+            </p>
+
+
+        </div>
+
+
+        <div class="poem-credit">
+
+            <strong>
+                — Anonymous
+            </strong>
+
+            <div class="poem-date">
+                اشاعت: 21 اگست 2026
             </div>
 
+        </div>
 
-            <div class="poem">
-
-
-                <p class="couplet">
-                    جب یاد تیری آتی ہے، ماں<br>
-                    لگتا ہے جان جاتی ہے، ماں
-                </p>
-
-
-                <p class="couplet">
-                    شب بھر نہ سو سکا، صبح ہونے کے خوف سے<br>
-                    صبح جو تیری موت کی خبر لاتی ہے، ماں
-                </p>
-
-
-                <p class="couplet">
-                    خواہ شبِ جمعہ ہو یا ہو جمعہ کا دن<br>
-                    ایک درد سے روح کانپتی ہے، ماں
-                </p>
-
-
-                <p class="couplet">
-                    ممکن نہیں کہ کوئی چکا دے بدلہ<br>
-                    تکلیف جو ہر شب اٹھاتی ہے، ماں
-                </p>
-
-
-                <div class="poem-separator"></div>
-
-
-                <p class="couplet">
-                    میں نے بچپن میں گوٹیاں کھیلیں<br>
-                    اور تُو نے ساری سختیاں جھیلیں
-                </p>
-
-
-                <p class="couplet">
-                    میں نے جب جب بھی کوئی آہ بھری<br>
-                    یا کسی شے کی طلب میں کوئی چاہ بھری
-                </p>
-
-
-                <p class="couplet">
-                    تُو نے دیا ہر پل مجھ کو سہارا، ماں جی<br>
-                    جیسے بھنور کے بیچ میں کنارا، ماں جی
-                </p>
-
-
-                <p class="couplet">
-                    میں جو اک خاک کا پتلا تھا کبھی<br>
-                    تیرے ہی دم سے بن گیا انساں، ماں جی
-                </p>
-
-
-                <p class="couplet">
-                    یہ تیرے خون کا ہی ثمر تھا کہ میں نے<br>
-                    زندگی میں جو کیا، کیا، ماں جی
-                </p>
-
-
-                <p class="couplet">
-                    یہ میں، میرے بچے اور میرا گھر<br>
-                    یہ سب ہیں تیری عطا، ماں جی
-                </p>
-
-
-                <p class="couplet">
-                    میں ہر وقت تیری دعاؤں کے حصار میں رہا<br>
-                    میں جیون میں جہاں جہاں بھی گیا، ماں جی
-                </p>
-
-
-                <div class="poem-separator"></div>
-
-
-                <p class="couplet">
-                    خود کو مصروف رکھنے کے لیے<br>
-                    پاگل پن پر اتر آیا ہوں
-                </p>
-
-
-                <p class="couplet">
-                    ماں، تیرے جانے کے بعد<br>
-                    میں بہت گھبرایا ہوں
-                </p>
-
-
-                <p class="couplet">
-                    میرے انداز، میرے تیور بدل گئے ہیں سارے<br>
-                    حرام ہے جو کبھی ایک دن بھی اترایا ہوں
-                </p>
-
-
-                <p class="couplet">
-                    جو کبھی تجھ سے پلک اٹھا کر بات کی<br>
-                    آج ہر ایک لمحے پر پچھتایا ہوں
-                </p>
-
-
-                <p class="couplet">
-                    آج تیری ضرورت پہلے سے کہیں زیادہ ہے<br>
-                    مجھ سے ہر شخص نے کیا کنارہ، ماں جی
-                </p>
-
-
-                <p class="couplet">
-                    مجھ کو دے پھر سے سہارا، ماں جی<br>
-                    میں آج کل ہوں بہت بے سہارا، ماں جی
-                </p>
-
-
-                <p class="couplet">
-                    ایک بار پھر میری زندگی میں آ، ماں جی<br>
-                    ہو سکے تو مجھے گلے سے لگا، ماں جی
-                </p>
-
-
-                <p class="couplet">
-                    آج تیری ہر بات رلاتی ہے، ماں<br>
-                    آج تیری یاد بہت آتی ہے، ماں
-                </p>
-
-
-            </div>
-
-
-            <div class="poem-ending">
-
-                <strong>
-                    — Anonymous
-                </strong>
-
-                <div class="publication-date">
-                    اشاعت: 21 اگست 2026
-                </div>
-
-            </div>
-
-        </article>
-
-
-    </section>
+    </article>
 
 
 
     <!-- =========================
-         RIGHT SIDE TABS
+         1/5 — RIGHT TABS
     ========================= -->
 
-    <aside class="side-tabs">
+    <aside class="tabs">
 
-
-        <div class="side-title">
+        <div class="tabs-title">
             📚 علم و فن
         </div>
 
@@ -997,33 +908,11 @@
 
 
         <a
-            href="#"
-            class="tab active"
-        >
-
-            <span class="tab-icon">
-                🌹
-            </span>
-
-            <span class="tab-title">
-                ماں جی
-            </span>
-
-            <span class="tab-description">
-                ایک بیٹے کی اپنی ماں کے نام
-            </span>
-
-        </a>
-
-
-
-        <a
             href="../"
             class="back"
         >
             ← مرکزی صفحہ
         </a>
-
 
     </aside>
 
@@ -1051,4 +940,4 @@
 
 </body>
 
-                </html>
+    </html>
