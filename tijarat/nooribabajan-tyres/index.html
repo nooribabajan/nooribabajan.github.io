@@ -1004,7 +1004,131 @@ footer p {
 
 </footer>
 
+<!-- =========================
+     ORDER FORM
+========================= -->
 
+<div id="orderForm" class="order-form-overlay">
+
+    <div class="order-form-box">
+
+        <button
+            type="button"
+            class="close-order-form"
+            onclick="closeOrderForm()"
+        >
+            ×
+        </button>
+
+        <h2>آن لائن آرڈر</h2>
+
+        <p>اپنی مطلوبہ معلومات درج کریں۔</p>
+
+        <label>نام</label>
+        <input
+            type="text"
+            id="customerName"
+            placeholder="اپنا نام لکھیں"
+        >
+
+        <label>موبائل نمبر</label>
+        <input
+            type="tel"
+            id="customerPhone"
+            placeholder="03XXXXXXXXX"
+            dir="ltr"
+        >
+
+        <label>گاڑی / ٹائر سائز</label>
+        <input
+            type="text"
+            id="vehicleTyreSize"
+            placeholder="مثلاً Toyota Corolla — 195/65 R15"
+        >
+
+        <label>کیا خریدنا چاہتے ہیں؟</label>
+
+        <div class="item-options">
+
+            <label class="item-option">
+                <input
+                    type="radio"
+                    name="itemType"
+                    value="tyres"
+                >
+                <span>🛞 ٹائر</span>
+            </label>
+
+            <label class="item-option">
+                <input
+                    type="radio"
+                    name="itemType"
+                    value="rims"
+                >
+                <span>⚙️ رم</span>
+            </label>
+
+            <label class="item-option">
+                <input
+                    type="radio"
+                    name="itemType"
+                    value="both"
+                >
+                <span>🛞⚙️ ٹائر اور رم دونوں</span>
+            </label>
+
+        </div>
+
+        <label>تعداد</label>
+        <input
+            type="number"
+            id="quantity"
+            min="1"
+            placeholder="مثلاً 4"
+        >
+
+        <label>خریداری کا طریقہ</label>
+
+        <div class="item-options">
+
+            <label class="item-option">
+                <input
+                    type="radio"
+                    name="paymentMethod"
+                    value="cash"
+                >
+                <span>نقد</span>
+            </label>
+
+            <label class="item-option">
+                <input
+                    type="radio"
+                    name="paymentMethod"
+                    value="installment"
+                >
+                <span>قسط</span>
+            </label>
+
+        </div>
+
+        <label>اضافی ہدایات</label>
+
+        <textarea
+            id="orderNotes"
+            placeholder="اگر کوئی اضافی بات بتانا چاہتے ہیں تو یہاں لکھیں"
+        ></textarea>
+
+        <button
+            type="button"
+            class="submit-order-button"
+            onclick="startOrderVerification()"
+        >
+            آرڈر جاری رکھیں
+        </button>
+
+    </div>
+
+   </div>
 </body>
 
 </html>
